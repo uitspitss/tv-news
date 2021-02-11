@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`molecules/ToastContainer snapshot test 1`] = `
+<div>
+  <div
+    class="Toastify"
+  />
+  <button
+    type="button"
+  >
+    trigger
+  </button>
+</div>
+`;

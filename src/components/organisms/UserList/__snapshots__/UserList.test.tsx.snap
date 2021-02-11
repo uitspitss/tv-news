@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`organisms/UserList snapshot test 1`] = `
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <p>
+      1
+      : 
+      john
+    </p>
+    <p>
+      2
+      : 
+      lisa
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
+        }
+      },
+      "@emotion/babel-preset-css-prop"
+    ]
+  ],
+  // only on the storybook, use babel-preset-css-prop instead of babel-plugin
+  "plugins": ["babel-plugin-macros"]
+}

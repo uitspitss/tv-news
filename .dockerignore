@@ -1,0 +1,9 @@
+node_modules
+.git/
+.hygen/
+.next/
+.vercel/
+.vscode/
+docker-compose.yml
+.env*
+storybook-static/

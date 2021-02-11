@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Checkbox snapshot test 1`] = `
+.emotion-0> {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0>label>input {
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-0>div>.error {
+  --tw-text-opacity: 1;
+  color: rgba(239, 68, 68, var(--tw-text-opacity));
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <label>
+      <input
+        aria-invalid="false"
+        aria-label="checkbox label"
+        type="checkbox"
+      />
+      <span
+        class="label"
+      >
+        checkbox label
+      </span>
+    </label>
+  </div>
+</div>
+`;

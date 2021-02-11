@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer snapshot test 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .emotion-0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.emotion-0>p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}
+
+.emotion-0>p>a {
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  margin-left: 0.25rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <p>
+      ©
+      2020 - 2021
+       *WEBSITE TITLE* —
+      <a
+        href="https://twitter.com/uitspitss"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        @uitspitss
+      </a>
+    </p>
+  </div>
+</div>
+`;

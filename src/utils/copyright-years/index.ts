@@ -1,0 +1,1 @@
+export { copyrightYears } from './copyrightYears';

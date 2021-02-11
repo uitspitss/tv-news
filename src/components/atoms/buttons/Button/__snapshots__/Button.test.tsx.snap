@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot test 1`] = `
+.emotion-0 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  border-style: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+<div>
+  <button
+    class="emotion-0 emotion-1"
+    type="button"
+  >
+    button
+  </button>
+</div>
+`;

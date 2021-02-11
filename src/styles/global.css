@@ -1,0 +1,30 @@
+/* Font Setting, See https://zenn.dev/tak_dcxi/articles/588fbc205251043dc357 */
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Segoe UI', 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+} */
+
+/* ゴシック体 */
+
+/* .sans-serif {
+  font-family: 'Helvetica Neue', 'Segoe UI', 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+} */
+
+/* 明朝体 */
+
+/* Noto Serif 使うときは _document.tsx の Web font を有効化する */
+
+/* .serif {
+  font-family: 'Noto Serif JP', serif;
+} */
+
+/* `next dev` 時に、ボタンのフォーカス装飾をなくすため */
+
+/* button:focus {
+  outline: none;
+} */
