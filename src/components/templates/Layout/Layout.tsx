@@ -41,8 +41,6 @@ const StyledComponent = styled(Component)`
   & > main {
     height: calc(100% - 44px - 36px);
     min-height: calc(100vh - 44px - 36px);
-
-    ${tw`px-2 py-4`}
   }
 `;
 

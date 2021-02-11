@@ -1,12 +1,11 @@
 export default {
-  title: '*WEBSITE TITLE*',
-  titleTemplate: '%s | *WEBSITE TITLE*',
+  title: '地方TV局YouTubeプレイリスト',
   description: 'my nextjs template',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.url.ie/',
-    site_name: '*WEBSITE TITLE*',
+    site_name: '地方TV局YouTubeプレイリスト',
   },
   twitter: {
     handle: '@uitspitss',
