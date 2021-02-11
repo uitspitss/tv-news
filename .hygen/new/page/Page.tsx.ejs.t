@@ -6,15 +6,15 @@ import { NextPage } from 'next';
 
 import { TemplateComponent } from '~/components/templates/template-component'
 
-type <%= page_name %>PageProps = {};
+type PageProps = {};
 
 /**
- * TODO: write an explanation of <%= page_name %>Page
+ * TODO: write an explanation of this Page
  */
-const <%= page_name %>Page: NextPage<<%= page_name %>PageProps> = (props) => {
+const Page: NextPage<PageProps> = (props) => {
   return (
     <TemplateComponent {...props} />
   );
 }
 
-export default <%= page_name %>Page;
+export default Page;
