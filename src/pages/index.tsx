@@ -6,7 +6,7 @@ import { IndexPage } from '~/components/pages/IndexPage';
 import { usePrefectures } from '~/hooks/use-prefectures';
 
 const Page: NextPage = () => {
-  const { prefectures: _, error } = usePrefectures();
+  const { prefectures, error } = usePrefectures();
 
   if (error) {
     return <div>failed to load ...</div>;
@@ -16,7 +16,7 @@ const Page: NextPage = () => {
     <>
       <NextSeo title="Index" />
       {/* <SimpleForm onValid={onValid} /> */}
-      <IndexPage />
+      <IndexPage prefectures={prefectures} />
     </>
   );
 };

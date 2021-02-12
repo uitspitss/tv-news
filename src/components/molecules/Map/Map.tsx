@@ -1,9 +1,8 @@
-import React, { memo, VFC } from 'react';
-import ReactMapboxGl, { Popup } from 'react-mapbox-gl';
+import React, { memo, FC, ReactElement } from 'react';
+import ReactMapboxGl from 'react-mapbox-gl';
 import tw, { styled } from 'twin.macro';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
-// import svg from '../../../../public/tv-icon.svg'
 
 const MapInstance = ReactMapboxGl({
   accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '',
@@ -14,12 +13,16 @@ export type MapProps = {
    * class for twin.macro
    */
   className?: string;
+  /**
+   * children
+   */
+  children?: ReactElement | ReactElement[];
 };
 
 type Props = MapProps;
 
-const Component: VFC<Props> = (props) => {
-  const { className } = props;
+const Component: FC<Props> = (props) => {
+  const { className, children } = props;
 
   return (
     <div className={className}>
@@ -30,9 +33,7 @@ const Component: VFC<Props> = (props) => {
         center={[137.685, 38.259]}
         zoom={[5]}
       >
-        <Popup className="popup" coordinates={[137.685, 38.259]}>
-          test
-        </Popup>
+        {children}
       </MapInstance>
     </div>
   );
@@ -41,15 +42,6 @@ const Component: VFC<Props> = (props) => {
 const StyledComponent = styled(Component)`
   & > .map {
     ${tw`w-full h-full min-w-full min-h-full`}
-
-    & > .popup {
-      & > .mapboxgl-popup-content {
-        ${tw`bg-gray-700 text-primary-300`}
-      }
-      & > .mapboxgl-popup-tip {
-        border-top-color: #374151;
-      }
-    }
   }
 `;
 
