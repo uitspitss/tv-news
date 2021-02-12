@@ -16,6 +16,6 @@ services:
     volumes:
       - /app/node_modules
       - ./:/app:cached
-    command: yarn storybook --ci
+    command: yarn sb --ci
     ports:
       - "6006:6006"

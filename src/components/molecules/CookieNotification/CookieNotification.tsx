@@ -38,11 +38,11 @@ const Component: VFC<Props> = (props) => {
 };
 
 const StyledComponent = styled(Component)`
-  ${tw`flex flex-wrap w-full justify-between items-center bg-gray-500 text-white text-sm font-bold px-4 py-3 transition duration-500 ease-in-out`}
+  ${tw`fixed z-10 flex flex-wrap w-full justify-between items-center bg-gray-500 text-white text-sm font-bold px-4 py-3 transition duration-500 ease-in-out`}
 
   & > div {
     & > .acceptButton {
-      ${tw`bg-primary-300 hover:bg-primary-200 text-white font-bold py-2 px-4 mr-2 border-none cursor-pointer`}
+      ${tw`bg-primary-700 hover:bg-primary-800 text-white font-bold py-2 px-4 mr-2 border-none cursor-pointer`}
     }
     & > .declineButton {
       ${tw`bg-transparent no-underline hover:underline text-white font-bold py-2 px-4 border-none cursor-pointer`}

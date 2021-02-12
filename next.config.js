@@ -72,6 +72,13 @@ module.exports = withSourceMaps({
         }),
       );
     }
+
+    config.module.rules.push({
+      test: /\.yml$/,
+      type: 'json',
+      use: 'yaml-loader',
+    });
+
     return config;
   },
   basePath,

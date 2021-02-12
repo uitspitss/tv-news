@@ -1,0 +1,1 @@
+export { TvIcon } from './TvIcon';

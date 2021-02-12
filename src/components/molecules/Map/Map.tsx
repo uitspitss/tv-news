@@ -1,10 +1,13 @@
-import React, { memo, useEffect, useRef, VFC } from 'react';
-import mapboxgl from 'mapbox-gl';
+import React, { memo, VFC } from 'react';
+import ReactMapboxGl, { Popup } from 'react-mapbox-gl';
 import tw, { styled } from 'twin.macro';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
+// import svg from '../../../../public/tv-icon.svg'
 
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '';
+const MapInstance = ReactMapboxGl({
+  accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '',
+});
 
 export type MapProps = {
   /**
@@ -18,24 +21,19 @@ type Props = MapProps;
 const Component: VFC<Props> = (props) => {
   const { className } = props;
 
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: ref.current ?? '',
-      style: 'mapbox://styles/mapbox/dark-v10',
-      center: [137.685, 38.259],
-      zoom: 5,
-    });
-
-    return () => {
-      map.remove();
-    };
-  }, [ref]);
-
   return (
     <div className={className}>
-      <div className="map" ref={ref} />
+      <MapInstance
+        className="map"
+        // eslint-disable-next-line react/style-prop-object
+        style="mapbox://styles/mapbox/dark-v10"
+        center={[137.685, 38.259]}
+        zoom={[5]}
+      >
+        <Popup className="popup" coordinates={[137.685, 38.259]}>
+          test
+        </Popup>
+      </MapInstance>
     </div>
   );
 };
@@ -43,6 +41,15 @@ const Component: VFC<Props> = (props) => {
 const StyledComponent = styled(Component)`
   & > .map {
     ${tw`w-full h-full min-w-full min-h-full`}
+
+    & > .popup {
+      & > .mapboxgl-popup-content {
+        ${tw`bg-gray-700 text-primary-300`}
+      }
+      & > .mapboxgl-popup-tip {
+        border-top-color: #374151;
+      }
+    }
   }
 `;
 
