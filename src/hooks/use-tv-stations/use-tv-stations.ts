@@ -14,7 +14,7 @@ export const useTvStations = () => {
 
     const fetchData = async () => {
       try {
-        setTvStations(data.stations);
+        setTvStations(data['tv-stations']);
       } catch (_error) {
         setError(true);
       }
