@@ -23,14 +23,17 @@ collections:
               - { label: プレイリストID, name: playlistId, widget: string}
               - name: prefectures
                 label: "所在地（都道府県）"
-                widget: relation
-                collection: yml
-                file: prefectures
-                searchFields:
-                  - "prefectures.*.name"
-                displayFields:
-                  - "prefectures.*.name"
-                valueField: "prefectures.*.name"
+                widget: list
+                fields:
+                  - name: name
+                    widget: relation
+                    collection: yml
+                    file: prefectures
+                    searchFields:
+                      - "prefectures.*.name"
+                    displayFields:
+                      - "prefectures.*.name"
+                    valueField: "prefectures.*.name"
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
