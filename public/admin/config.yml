@@ -18,20 +18,25 @@ collections:
           fields:
             - { label: テレビ局名, name: name, widget: string}
             - { label: プレイリストID, name: playlistId, widget: string}
-            - label: "所在地（都道府県）"
+            - label: '所在地（都道府県）'
               name: prefectures
               widget: list
               fields:
                 - { label: 都道府県名, name: name, widget: string}
-  - name: prefecture
-    label: 都道府県
+  - name: meta
+    label: 設定
     files:
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
+        delete: false
         fields:
           - name: prefectures
             label: 都道府県
             widget: list
+            create: false
+            delete: false
             fields:
               - { label: 都道府県名, name: name, widget: string}
+              - { label: 緯度, name: lat, widget: number}
+              - { label: 経度, name: lng, widget: number}
