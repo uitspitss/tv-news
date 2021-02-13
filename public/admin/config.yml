@@ -10,7 +10,7 @@ collections:
     files:
     - label: "テレビ局一覧"
       name: "tv-stations"
-      file: "content/tv-stations.yml"
+      file: "src/contents/tv-stations.yml"
       fields:
         - { label: "テレビ局名", name: "name", widget: "string"}
         - { label: "プレイリストID", name: "playlistId", widget: "string" }
@@ -24,7 +24,7 @@ collections:
     files:
       - name: "prefectures"
         label: "都道府県リスト"
-        file: "content/prefectures.yml"
+        file: "src/contents/prefectures.yml"
         fields:
           - name: prefectures
             label: 都道府県
