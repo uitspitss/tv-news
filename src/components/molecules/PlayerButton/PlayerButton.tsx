@@ -159,6 +159,9 @@ export const PlayerButton = memo((props: PlayerButtonProps) => {
   const [playerSize, setPlayerSize] = useState({ width: '360', height: '203' });
 
   const handlePlayerActive = (active: boolean) => {
+    if (!active) {
+      setPlayerSize({ width: '360', height: '203' });
+    }
     setPlayerActive(active);
   };
   const handlePlayerSize = (args: { width: number; height: number }) => {
