@@ -1,11 +1,12 @@
 export default {
-  title: '地方TV局YouTubeプレイリスト',
-  description: 'my nextjs template',
+  title: 'TV局ニュースプレイリスト',
+  description:
+    'TV局のYouTubeチャンネルでニュース専用プレイリストをまとめたサイトです。',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'ja_JP',
     url: 'https://www.url.ie/',
-    site_name: '地方TV局YouTubeプレイリスト',
+    site_name: 'TV局ニュースプレイリスト',
   },
   twitter: {
     handle: '@uitspitss',

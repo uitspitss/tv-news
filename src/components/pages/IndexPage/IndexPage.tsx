@@ -1,9 +1,13 @@
-import React, { memo, VFC } from 'react';
+import React, { Fragment, memo, useMemo, VFC } from 'react';
 import tw, { styled } from 'twin.macro';
 import { Popup } from 'react-mapbox-gl';
 
-import { Map } from '~/components/molecules/Map';
+import { Map as MyMap } from '~/components/molecules/Map';
+import { PlayerButton } from '~/components/molecules/PlayerButton';
 import type { Prefecture } from '~/models/prefecture';
+import type { TvStation } from '~/models/tv-station';
+
+type DataMap = Map<Prefecture['name'], Array<TvStation>>;
 
 export type IndexPageProps = {
   /**
@@ -14,25 +18,43 @@ export type IndexPageProps = {
    * prefectures
    */
   prefectures?: Prefecture[];
+  /**
+   * tv stations
+   */
+  tvStations?: TvStation[];
 };
 
-type Props = IndexPageProps;
+type Props = Readonly<{
+  dataMap: DataMap;
+}> &
+  IndexPageProps;
 
 const Component: VFC<Props> = (props) => {
-  const { className, prefectures } = props;
+  const { className, dataMap, prefectures } = props;
 
   return (
     <div className={className}>
-      <Map className="map">
-        {prefectures?.map((prefecture) => (
-          <Popup
-            className="popup"
-            coordinates={[prefecture.lng, prefecture.lat]}
-          >
-            {prefecture.name}
-          </Popup>
-        ))}
-      </Map>
+      <MyMap className="map">
+        {prefectures?.map((prefecture) =>
+          dataMap.has(prefecture.name) ? (
+            <Popup
+              key={prefecture.name}
+              className="popup"
+              coordinates={[prefecture.lng, prefecture.lat]}
+            >
+              {dataMap.get(prefecture.name)?.map((data) => (
+                <PlayerButton
+                  key={data.name}
+                  playlistId={data.playlistId}
+                  tvStationName={data.name}
+                />
+              ))}
+            </Popup>
+          ) : (
+            <Fragment key={prefecture.name} />
+          ),
+        )}
+      </MyMap>
     </div>
   );
 };
@@ -49,6 +71,7 @@ const StyledComponent = styled(Component)`
       }
       & > .mapboxgl-popup-tip {
         border-top-color: #374151;
+        border-bottom-color: #374151;
       }
     }
   }
@@ -58,5 +81,23 @@ const StyledComponent = styled(Component)`
  * IndexPage
  */
 export const IndexPage = memo((props: IndexPageProps) => {
-  return <StyledComponent {...props} />;
+  const { prefectures, tvStations } = props;
+
+  const dataMap = useMemo(() => {
+    const map: DataMap = new Map();
+
+    prefectures?.forEach((pref) => {
+      const stationsInPref = tvStations?.filter((station) =>
+        station.prefectures.includes(pref.name),
+      );
+
+      if (stationsInPref?.length) {
+        map.set(pref.name, stationsInPref);
+      }
+    });
+
+    return map;
+  }, [prefectures, tvStations]);
+
+  return <StyledComponent {...props} {...{ dataMap }} />;
 });
