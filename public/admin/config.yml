@@ -25,12 +25,12 @@ collections:
                 label: "所在地（都道府県）"
                 widget: relation
                 collection: yml
-                file: src/contents/tv-stations.yml
+                file: prefectures
                 searchFields:
-                  - "tv-stations.*.name"
+                  - "prefectures.*.name"
                 displayFields:
-                  - "tv-stations.*.name"
-                valueField: "tv-stations.*.slug"
+                  - "prefectures.*.name"
+                valueField: "prefectures.*.name"
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
