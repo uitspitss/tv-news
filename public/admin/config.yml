@@ -21,11 +21,16 @@ collections:
             fields:
               - { label: テレビ局名, name: name, widget: string}
               - { label: プレイリストID, name: playlistId, widget: string}
-              - label: '所在地（都道府県）'
+              - label: "所在地（都道府県）"
                 name: prefectures
-                widget: list
-                fields:
-                  - { label: 都道府県名, name: name, widget: string}
+                widget: relation
+                collection: yml
+                file: tv-stations
+                searchFields:
+                  - "tv-stations.*.name"
+                displayFields:
+                  - "tv-stations.*.name"
+                valueField: "tv-stations.*.slug"
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
