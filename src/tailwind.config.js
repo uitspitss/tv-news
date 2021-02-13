@@ -23,7 +23,7 @@ module.exports = {
       // See https://tailwindcss.com/docs/customizing-colors
       colors: {
         primary: colors.gray,
-        secondary: colors.pink,
+        secondary: colors.indigo,
         error: colors.red,
         warning: colors.yellow,
         info: colors.blue,

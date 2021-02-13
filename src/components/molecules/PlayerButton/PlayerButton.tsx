@@ -100,7 +100,7 @@ const Component: VFC<Props> = (props) => {
       ) : (
         <Button
           className="handler"
-          primary
+          secondary
           onClick={() => handlePlayerActive(true)}
         >
           {tvStationName}
