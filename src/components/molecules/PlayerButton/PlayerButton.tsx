@@ -143,7 +143,7 @@ const StyledComponent = styled(Component)`
   ${tw`py-1`}
 
   & > .playerHeader {
-    ${tw`w-full flex justify-between text-primary-300`}
+    ${tw`w-full flex justify-between items-center text-primary-300`}
   }
 
   & > .handler {
