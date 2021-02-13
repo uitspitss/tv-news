@@ -98,7 +98,11 @@ const Component: VFC<Props> = (props) => {
           />
         </Suspense>
       ) : (
-        <Button primary onClick={() => handlePlayerActive(true)}>
+        <Button
+          className="handler"
+          primary
+          onClick={() => handlePlayerActive(true)}
+        >
           {tvStationName}
         </Button>
       )}
@@ -111,6 +115,10 @@ const StyledComponent = styled(Component)`
 
   & > .playerHeader {
     ${tw`w-full flex justify-between text-primary-300`}
+  }
+
+  & > .handler {
+    ${tw`w-full`}
   }
 `;
 
