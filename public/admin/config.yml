@@ -5,27 +5,24 @@ media_folder: public/images
 public_folder: images
 
 collections:
-  - name: tv-station
-    label: テレビ局
+  - name: yml
+    label: ymlファイル
     files:
-    - label: テレビ局一覧
-      name: tv-stations
-      file: src/contents/tv-stations.yml
-      fields:
-        - name: tv-stations
-          label: テレビ局
-          widget: list
-          fields:
-            - { label: テレビ局名, name: name, widget: string}
-            - { label: プレイリストID, name: playlistId, widget: string}
-            - label: '所在地（都道府県）'
-              name: prefectures
-              widget: list
-              fields:
-                - { label: 都道府県名, name: name, widget: string}
-  - name: meta
-    label: 設定
-    files:
+      - name: tv-stations
+        label: テレビ局リスト
+        file: src/contents/tv-stations.yml
+        fields:
+          - name: tv-stations
+            label: テレビ局
+            widget: list
+            fields:
+              - { label: テレビ局名, name: name, widget: string}
+              - { label: プレイリストID, name: playlistId, widget: string}
+              - label: '所在地（都道府県）'
+                name: prefectures
+                widget: list
+                fields:
+                  - { label: 都道府県名, name: name, widget: string}
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
