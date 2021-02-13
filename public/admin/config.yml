@@ -21,8 +21,8 @@ collections:
             fields:
               - { label: テレビ局名, name: name, widget: string}
               - { label: プレイリストID, name: playlistId, widget: string}
-              - label: "所在地（都道府県）"
-                name: prefectures
+              - name: prefectures
+                label: "所在地（都道府県）"
                 widget: relation
                 collection: yml
                 file: tv-stations
