@@ -25,7 +25,7 @@ collections:
                 label: "所在地（都道府県）"
                 widget: relation
                 collection: yml
-                file: prefectures
+                file: src/contents/prefectures.yml
                 searchFields:
                   - "prefectures.*.name"
                 displayFields:
