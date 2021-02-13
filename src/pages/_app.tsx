@@ -12,7 +12,6 @@ import { cache } from '@emotion/css';
 
 import * as gtag from '~/lib/gtag';
 import SEO from '~/next-seo.config';
-import { CookieNotification } from '~/components/molecules/CookieNotification';
 import { Layout } from '~/components/templates/Layout';
 import { ToastContainer } from '~/components/molecules/ToastContainer';
 // import '~/styles/global.css';
@@ -56,7 +55,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <CacheProvider value={cache}>
-      <CookieNotification tw="fixed bottom-0 left-0" />
       <GlobalStyles />
       <DefaultSeo {...SEO} />
       <ToastContainer />
