@@ -88,7 +88,7 @@ export const IndexPage = memo((props: IndexPageProps) => {
 
     prefectures?.forEach((pref) => {
       const stationsInPref = tvStations?.filter((station) =>
-        station.prefectures.includes(pref.name),
+        station.prefectures.map((p) => p.name).includes(pref.name),
       );
 
       if (stationsInPref?.length) {

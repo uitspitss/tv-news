@@ -1,91 +1,121 @@
 stations:
   - name: 北海道テレビ
     playlistId: UUSWOnDD1KIriGmyQ7SgNA4A
-    prefectures: [北海道]
+    prefectures:
+      - name: 北海道
   - name: 北海道放送
     playlistId: PUCTpf5c_9HDo_OSu3aX8uFQ
-    prefectures: [北海道]
+    prefectures:
+      - name: 北海道
   - name: 北海道文化放送
     playlistId: UUpQs_warGhUzJhBdwLfF34g
-    prefectures: [北海道]
+    prefectures:
+      - name: 北海道
   - name: 秋田テレビ
     playlistId: UURTTHlDJMiCrnZOVelyAkuQ
-    prefectures: [秋田県]
+    prefectures:
+      - name: 秋田県
   - name: 仙台放送
     playlistId: UUlElfQ7F1QndkPEFuqrDCLQ
-    prefectures: [宮城県]
+    prefectures:
+      - name: 宮城県
   - name: 日本テレビ
     playlistId: UUuTAXTexrhetbOe3zgskJBQ
-    prefectures: [東京都]
+    prefectures:
+      - name: 東京都
   - name: テレビ朝日
     playlistId: UUGCZAYq5Xxojl_tSXcVJhiQ
-    prefectures: [東京都]
+    prefectures:
+      - name: 東京都
   - name: 東京放送
     playlistId: UU6AG81pAkf6Lbi_1VC5NmPA
-    prefectures: [東京都]
+    prefectures:
+      - name: 東京都
   - name: テレビ東京
     playlistId: UUkKVQ_GNjd8FbAuT6xDcWgg
-    prefectures: [東京都]
+    prefectures:
+      - name: 東京都
   - name: フジテレビ
     playlistId: UUoQBJMzcwmXrRSHBFAlTsIw
-    prefectures: [東京都]
+    prefectures:
+      - name: 東京都
   - name: 群馬テレビ
     playlistId: PLzS904xpc4ZE1-sWwQwoEpzPkBUko8rOz
-    prefectures: [群馬県]
+    prefectures:
+      - name: 群馬県
   - name: 北陸朝日放送
     playlistId: PLifVGdqsTJWhYdWo6CeBXM-IPavtTK4HR
-    prefectures: [石川県]
+    prefectures:
+      - name: 石川県
   - name: 静岡朝日テレビ
     playlistId: UUvF5vIejmf-H_XSluaBldfg
-    prefectures: [静岡県]
+    prefectures:
+      - name: 静岡県
   - name: 静岡放送
     playlistId: PLFY0XdT_E14kMOTcEoNIBU-NP-Ay3FIup
-    prefectures: [静岡県]
+    prefectures:
+      - name: 静岡県
   - name: 名古屋テレビ
     playlistId: UUWnOKASPkCBEL-_O8odMvtg
-    prefectures: [愛知県]
+    prefectures:
+      - name: 愛知県
   - name: 中部日本放送
     playlistId: UUh5mvJtIWycou5b8smpBuxA
-    prefectures: [愛知県]
+    prefectures:
+      - name: 愛知県
   - name: 関西テレビ放送
     playlistId: UUQhaZjODkIjuv38d-i5TVRw
-    prefectures: 大阪府
+    prefectures:
+      - name: 大阪府
   - name: 奈良テレビ放送
     playlistId: PLTlbsMA1Q_zeRHarfwsnH4hXe8Ro4ChG8
-    prefectures: [奈良県]
+    prefectures:
+      - name: 奈良県
   - name: サンテレビ
     playlistId: UUtf-aWCCwZPep5woQd9lAIQ
-    prefectures: [兵庫県]
+    prefectures:
+      - name: 兵庫県
   - name: 瀬戸内海放送
     playlistId: PL_aMaE1viJxcPYRbltHChI21ZKli9apac
-    prefectures: [香川県, 岡山県]
+    prefectures:
+      - name: 香川県 岡山県]
   - name: 山口朝日放送
     playlistId: UUKIglIH9_xIK0feahuKhJEQ
-    prefectures: [山口県]
+    prefectures:
+      - name: 山口県
   - name: テレビ山口
     playlistId: UU9r31LvpWhWU0aJdAirOZDQ
-    prefectures: [山口県]
+    prefectures:
+      - name: 山口県
   - name: 高知さんさんテレビ
     playlistId: UUpgGl1uKYpx5eN-gvSnbCSQ
-    prefectures: [高知県]
+    prefectures:
+      - name: 高知県
   - name: 福岡放送
     playlistId: PL-oc7enlTdlKT9yWD-6m64Li6953UCIv4
-    prefectures: [福岡県]
+    prefectures:
+      - name: 福岡県
   - name: 九州朝日放送
     playlistId: UUS8ZQejq2CL-nZcnRWZCA5Q
-    prefectures: [福岡県]
+    prefectures:
+      - name: 福岡県
   - name: ＲＫＢ毎日放送
     playlistId: UUgrmHAblzN-QzMMgl2oNRog
-    prefectures: [福岡県]
+    prefectures:
+      - name: 福岡県
   - name: テレビ西日本
     playlistId: UUZ0U1AoJOKVdlejhjUU1fBg
-    prefectures: [福岡県]
+    prefectures:
+      - name: 福岡県
   - name: サガテレビ
     playlistId: UUmXfKCasdSTe9B49-Es9XZA
-    prefectures: [佐賀県]
+    prefectures:
+      - name: 佐賀県
   - name: テレビ大分
     playlistId: UUhx_y6aLWNkifSDUt2TVAzg
-    prefectures: [大分県]
+    prefectures:
+      - name: 大分県
   - name: 琉球放送
     playlistId: UUl27leged0PT2kIrRtrFYKA
-    prefectures: [沖縄県]
+    prefectures:
+      - name: 沖縄県
