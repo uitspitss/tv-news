@@ -7,6 +7,7 @@ public_folder: images
 collections:
   - name: yml
     label: ymlファイル
+    delete: false
     files:
       - name: tv-stations
         label: テレビ局リスト
@@ -26,13 +27,10 @@ collections:
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
-        delete: false
         fields:
           - name: prefectures
             label: 都道府県
             widget: list
-            create: false
-            delete: false
             fields:
               - { label: 都道府県名, name: name, widget: string}
               - { label: 緯度, name: lat, widget: number}
