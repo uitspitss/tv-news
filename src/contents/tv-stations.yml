@@ -78,8 +78,8 @@ tv-stations:
   - name: 瀬戸内海放送
     playlistId: PL_aMaE1viJxcPYRbltHChI21ZKli9apac
     prefectures:
-      - name: 福井県
-      - name: 長野県
+      - name: 岡山県
+      - name: 香川県
   - name: 山口朝日放送
     playlistId: UUKIglIH9_xIK0feahuKhJEQ
     prefectures:
