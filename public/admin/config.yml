@@ -27,10 +27,10 @@ collections:
                 collection: yml
                 file: prefectures
                 searchFields:
-                  - name
+                  - "prefectures.*.name"
                 displayFields:
-                  - name
-                valueField: name
+                  - "prefectures.*.name"
+                valueField: "prefectures.*.name"
       - name: prefectures
         label: 都道府県リスト
         file: src/contents/prefectures.yml
