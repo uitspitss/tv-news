@@ -8,6 +8,8 @@ collections:
   - name: yml
     label: ymlファイル
     delete: false
+    editor:
+      preview: false
     files:
       - name: tv-stations
         label: テレビ局リスト
