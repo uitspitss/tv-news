@@ -12,13 +12,17 @@ collections:
       name: tv-stations
       file: src/contents/tv-stations.yml
       fields:
-        - { label: テレビ局名, name: name, widget: string}
-        - { label: プレイリストID, name: playlistId, widget: string}
-        - label: "所在地（都道府県）"
-          name: prefectures
+        - name: tv-stations
+          label: テレビ局
           widget: list
           fields:
-            - { label: 都道府県名, name: name, widget: string}
+            - { label: テレビ局名, name: name, widget: string}
+            - { label: プレイリストID, name: playlistId, widget: string}
+            - label: "所在地（都道府県）"
+              name: prefectures
+              widget: list
+              fields:
+                - { label: 都道府県名, name: name, widget: string}
   - name: prefecture
     label: 都道府県
     files:
