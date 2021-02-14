@@ -1,5 +1,9 @@
 [[plugins]]
   package = "@sentry/netlify-build-plugin"
 
+  [plugins.inputs]
+    sentryOrg = "uitspitss"
+    sentryProject = "tv-news"
+
 [[plugins]]
     package = "netlify-plugin-cache-nextjs"
