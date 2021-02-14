@@ -24,25 +24,26 @@ const Component: VFC<Props> = (props) => {
     <CookieConsent
       disableStyles
       flipButtons
-      location="bottom"
+      location="top"
       containerClasses={className}
       buttonClasses="acceptButton"
+      buttonText="理解しました"
       // enableDeclineButton
       // declineButtonClasses="declineButton"
       // onDecline={handleDecline}
       debug={debug}
     >
-      This website uses cookies to enhance the user experience.
+      この Web サイトではユーザー体験向上のため cookie を使用しております。
     </CookieConsent>
   );
 };
 
 const StyledComponent = styled(Component)`
-  ${tw`fixed z-10 flex flex-wrap w-full justify-between items-center bg-gray-500 text-white text-sm font-bold px-4 py-3 transition duration-500 ease-in-out`}
+  ${tw`fixed z-10 flex flex-wrap w-full justify-between items-center bg-primary-600 text-white text-sm font-bold px-4 py-3`}
 
   & > div {
     & > .acceptButton {
-      ${tw`bg-primary-700 hover:bg-primary-800 text-white font-bold py-2 px-4 mr-2 border-none cursor-pointer`}
+      ${tw`bg-info-700 hover:bg-info-800 text-white font-bold py-2 px-4 mr-2 border-none cursor-pointer animate-pulse`}
     }
     & > .declineButton {
       ${tw`bg-transparent no-underline hover:underline text-white font-bold py-2 px-4 border-none cursor-pointer`}

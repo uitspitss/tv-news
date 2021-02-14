@@ -14,6 +14,7 @@ import * as gtag from '~/lib/gtag';
 import SEO from '~/next-seo.config';
 import { Layout } from '~/components/templates/Layout';
 import { ToastContainer } from '~/components/molecules/ToastContainer';
+import { CookieNotification } from '~/components/molecules/CookieNotification';
 // import '~/styles/global.css';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -58,6 +59,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <GlobalStyles />
       <DefaultSeo {...SEO} />
       <ToastContainer />
+      <CookieNotification />
       <RecoilRoot>
         <Layout>
           <Component {...pageProps} />
