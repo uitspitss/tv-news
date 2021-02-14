@@ -35,7 +35,7 @@ const Component: VFC<Props> = (props) => {
 
 const StyledComponent = styled(Component)`
   & {
-    ${tw`flex items-center sm:flex-row flex-col py-2 px-2 lg:px-6 bg-primary-700`}
+    ${tw`flex items-center py-2 px-2 lg:px-6 bg-primary-700`}
 
     & > .title {
       ${tw`text-sm text-primary-500 mr-1`}

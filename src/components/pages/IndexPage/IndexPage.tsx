@@ -41,9 +41,11 @@ const Component: VFC<Props> = (props) => {
               key={prefecture.name}
               className="popup"
               coordinates={[prefecture.lng, prefecture.lat]}
+              anchor="center"
             >
               {dataMap.get(prefecture.name)?.map((data) => (
                 <PlayerButton
+                  className="playerButton"
                   key={data.name}
                   playlistId={data.playlistId}
                   tvStationName={data.name}
@@ -67,11 +69,11 @@ const StyledComponent = styled(Component)`
 
     .popup {
       & > .mapboxgl-popup-content {
-        ${tw`bg-gray-700 text-primary-300`}
+        ${tw`bg-gray-700 bg-opacity-0 text-primary-300`}
       }
-      & > .mapboxgl-popup-tip {
-        border-top-color: #374151;
-        border-bottom-color: #374151;
+
+      & > .playerButton {
+        ${tw`hover:z-10`}
       }
     }
   }
