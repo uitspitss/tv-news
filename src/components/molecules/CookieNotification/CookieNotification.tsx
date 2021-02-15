@@ -24,7 +24,7 @@ const Component: VFC<Props> = (props) => {
     <CookieConsent
       disableStyles
       flipButtons
-      location="top"
+      location="bottom"
       containerClasses={className}
       buttonClasses="acceptButton"
       buttonText="理解しました"
