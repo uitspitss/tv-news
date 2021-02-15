@@ -23,7 +23,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.svg" />
           {/* <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese" rel="stylesheet" /> */}
           <style
             // @ts-ignore twin.macro
