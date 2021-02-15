@@ -6,25 +6,32 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import { extractCritical } from '@emotion/server';
 
 import { GA_TRACKING_ID } from '~/lib/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
+    const page = await ctx.renderPage();
+    const styles = extractCritical(page.html);
 
-    return initialProps;
+    return { ...initialProps, ...page, ...styles };
   }
 
   render() {
     return (
       <Html lang="ja">
         <Head>
-          <link rel="icon" href="/favicon.svg" />
+          <link rel="icon" href="/favicon.ico" />
           {/* <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese" rel="stylesheet" /> */}
+          <style
+            // @ts-ignore twin.macro
+            data-emotion-css={this.props.ids.join(' ')}
+            // @ts-ignore twin.macro
+            dangerouslySetInnerHTML={{ __html: this.props.css }}
+          />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-        </Head>
-        <body>
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -42,6 +49,8 @@ class MyDocument extends Document {
           `,
             }}
           />
+        </Head>
+        <body>
           <Main />
           <NextScript />
         </body>
