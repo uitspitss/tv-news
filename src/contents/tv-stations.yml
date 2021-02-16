@@ -1,5 +1,5 @@
 tv-stations:
-  - name: 北海道テレビ
+  - name: 北海道テレビ test
     playlistId: UUSWOnDD1KIriGmyQ7SgNA4A
     prefectures:
       - name: 北海道
