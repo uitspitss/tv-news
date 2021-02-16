@@ -43,7 +43,7 @@ const StyledComponent = styled(Component)`
 
   & > div {
     & > .acceptButton {
-      ${tw`bg-info-700 hover:bg-info-800 text-white font-bold py-2 px-4 mr-2 border-none cursor-pointer animate-pulse`}
+      ${tw`bg-info-700 hover:bg-info-800 text-white font-bold py-2 px-4 mr-2 border-none cursor-pointer`}
     }
     & > .declineButton {
       ${tw`bg-transparent no-underline hover:underline text-white font-bold py-2 px-4 border-none cursor-pointer`}
