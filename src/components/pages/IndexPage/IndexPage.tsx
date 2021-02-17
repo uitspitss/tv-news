@@ -4,6 +4,8 @@ import { Popup } from 'react-mapbox-gl';
 
 import { Map as MyMap } from '~/components/molecules/Map';
 import { PlayerButton } from '~/components/molecules/PlayerButton';
+import { Button } from '~/components/atoms/buttons/Button';
+import { useCurrentTvStationState } from '~/hooks/use-current-tv-station';
 import type { Prefecture } from '~/models/prefecture';
 import type { TvStation } from '~/models/tv-station';
 
@@ -26,36 +28,51 @@ export type IndexPageProps = {
 
 type Props = Readonly<{
   dataMap: DataMap;
+  currentTvStation: TvStation | null;
 }> &
   IndexPageProps;
 
 const Component: VFC<Props> = (props) => {
-  const { className, dataMap, prefectures } = props;
+  const { className, prefectures, dataMap, currentTvStation } = props;
 
   return (
     <div className={className}>
       <MyMap className="map">
-        {prefectures?.map((prefecture) =>
-          dataMap.has(prefecture.name) ? (
-            <Popup
-              key={prefecture.name}
-              className="popup"
-              coordinates={[prefecture.lng, prefecture.lat]}
-              anchor="center"
-            >
-              {dataMap.get(prefecture.name)?.map((data) => (
-                <PlayerButton
-                  className="playerButton"
-                  key={data.name}
-                  playlistId={data.playlistId}
-                  tvStationName={data.name}
-                />
-              ))}
-            </Popup>
-          ) : (
-            <Fragment key={prefecture.name} />
-          ),
-        )}
+        <>
+          <div className="globalControls">
+            <Button className="button">他のプレイヤーを閉じる</Button>
+            <Button className="button">ランダム再生</Button>
+          </div>
+          {prefectures?.map((prefecture) =>
+            dataMap.has(prefecture.name) ? (
+              <Popup
+                key={prefecture.name}
+                className="popup"
+                coordinates={[prefecture.lng, prefecture.lat]}
+                anchor="center"
+                style={
+                  currentTvStation?.prefectures
+                    .map((p) => p.name)
+                    .includes(prefecture.name)
+                    ? { zIndex: 10 }
+                    : { zIndex: 3 }
+                }
+              >
+                {dataMap.get(prefecture.name)?.map((data) => (
+                  <PlayerButton
+                    className="playerButton"
+                    key={data.name}
+                    playlistId={data.playlistId}
+                    tvStation={data}
+                    // style={}
+                  />
+                ))}
+              </Popup>
+            ) : (
+              <Fragment key={prefecture.name} />
+            ),
+          )}
+        </>
       </MyMap>
     </div>
   );
@@ -67,13 +84,17 @@ const StyledComponent = styled(Component)`
 
     height: calc(100vh - 44px - 36px);
 
+    .globalControls {
+      ${tw`fixed top-12 right-4 flex flex-col items-end`}
+
+      & > .button {
+        ${tw`text-white text-sm`}
+      }
+    }
+
     .popup {
       & > .mapboxgl-popup-content {
         ${tw`bg-gray-700 bg-opacity-0 text-primary-300`}
-      }
-
-      & > .playerButton {
-        ${tw`hover:z-10`}
       }
     }
   }
@@ -84,6 +105,7 @@ const StyledComponent = styled(Component)`
  */
 export const IndexPage = memo((props: IndexPageProps) => {
   const { prefectures, tvStations } = props;
+  const currentTvStation = useCurrentTvStationState();
 
   const dataMap = useMemo(() => {
     const map: DataMap = new Map();
@@ -101,5 +123,5 @@ export const IndexPage = memo((props: IndexPageProps) => {
     return map;
   }, [prefectures, tvStations]);
 
-  return <StyledComponent {...props} {...{ dataMap }} />;
+  return <StyledComponent {...props} {...{ dataMap, currentTvStation }} />;
 });

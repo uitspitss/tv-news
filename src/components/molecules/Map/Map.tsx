@@ -21,6 +21,10 @@ export type MapProps = {
 
 type Props = MapProps;
 
+// for preventing to re-render when map contents updates
+const center = [137.685, 38.259] as [number, number];
+const zoom = [5] as [number];
+
 const Component: FC<Props> = (props) => {
   const { className, children } = props;
 
@@ -30,8 +34,8 @@ const Component: FC<Props> = (props) => {
         className="map"
         // eslint-disable-next-line react/style-prop-object
         style="mapbox://styles/mapbox/dark-v10"
-        center={[137.685, 38.259]}
-        zoom={[5]}
+        center={center}
+        zoom={zoom}
       >
         {children}
       </MapInstance>

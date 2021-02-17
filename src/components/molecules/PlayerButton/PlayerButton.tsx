@@ -2,6 +2,8 @@ import React, { lazy, memo, Suspense, useState, VFC } from 'react';
 import tw, { styled } from 'twin.macro';
 
 import { Button } from '~/components/atoms/buttons/Button';
+import { useCurrentTvStationDispatch } from '~/hooks/use-current-tv-station';
+import { TvStation } from '~/models/tv-station';
 
 export type PlayerButtonProps = {
   /**
@@ -11,7 +13,7 @@ export type PlayerButtonProps = {
   /**
    * tv station name
    */
-  tvStationName: string;
+  tvStation: TvStation;
   /**
    * youtube playlist id
    */
@@ -21,14 +23,14 @@ export type PlayerButtonProps = {
 type Props = {
   playerActive: boolean;
   playerSize: { width: string; height: string };
-  handlePlayerActive: (active: boolean) => void;
+  handlePlayerActive: (active: boolean, tvStation: TvStation) => void;
   handlePlayerSize: (args: { width: number; height: number }) => void;
 } & PlayerButtonProps;
 
 const Component: VFC<Props> = (props) => {
   const {
     className,
-    tvStationName,
+    tvStation,
     playlistId,
     playerActive,
     playerSize,
@@ -43,7 +45,7 @@ const Component: VFC<Props> = (props) => {
       {playerActive ? (
         <Suspense fallback="loading player...">
           <div className="playerHeader">
-            <div className="stationName">{tvStationName}</div>
+            <div className="stationName">{tvStation.name}</div>
             <div className="controls">
               {playerSize.width === '360' ? (
                 <Button
@@ -96,7 +98,7 @@ const Component: VFC<Props> = (props) => {
               )}
               <Button
                 aria-label="close"
-                onClick={() => handlePlayerActive(false)}
+                onClick={() => handlePlayerActive(false, tvStation)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,9 +132,9 @@ const Component: VFC<Props> = (props) => {
         <Button
           className="handler"
           secondary
-          onClick={() => handlePlayerActive(true)}
+          onClick={() => handlePlayerActive(true, tvStation)}
         >
-          {tvStationName}
+          {tvStation.name}
         </Button>
       )}
     </div>
@@ -157,13 +159,16 @@ const StyledComponent = styled(Component)`
 export const PlayerButton = memo((props: PlayerButtonProps) => {
   const [playerActive, setPlayerActive] = useState(false);
   const [playerSize, setPlayerSize] = useState({ width: '360', height: '203' });
+  const setCurrentTvStation = useCurrentTvStationDispatch();
 
-  const handlePlayerActive = (active: boolean) => {
+  const handlePlayerActive = (active: boolean, tvStation: TvStation) => {
     if (!active) {
       setPlayerSize({ width: '360', height: '203' });
     }
     setPlayerActive(active);
+    setCurrentTvStation(tvStation);
   };
+
   const handlePlayerSize = (args: { width: number; height: number }) => {
     setPlayerSize({ width: String(args.width), height: String(args.height) });
   };

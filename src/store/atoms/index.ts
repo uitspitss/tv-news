@@ -1,8 +1,8 @@
 import { atom } from 'recoil';
 
-import type { User } from '~/models/user';
+import type { TvStation } from '~/models/tv-station';
 
-export const usersState = atom<User[]>({
-  key: 'usersState',
-  default: [],
+export const currentTvStationState = atom<TvStation | null>({
+  key: 'current-tv-station-state',
+  default: null,
 });
