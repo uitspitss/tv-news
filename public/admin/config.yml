@@ -5,7 +5,7 @@ media_folder: public/images
 public_folder: images
 
 collections:
-- name: config
+  - name: config
     label: Config
     delete: false
     editor:
@@ -28,6 +28,11 @@ collections:
           - name: openGraph
             label: open graph
             widget: object
+            fields:
+              - name: type
+                label: Type
+                widget: select
+                options: ['website', '']
           - name: twitter
             label: Twitter account
             widget: string
