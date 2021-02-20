@@ -2,6 +2,8 @@
 
 exports[`molecules/CookieNotification snapshot test 1`] = `
 .emotion-0 {
+  position: fixed;
+  z-index: 10;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,7 +21,7 @@ exports[`molecules/CookieNotification snapshot test 1`] = `
   -ms-flex-align: center;
   align-items: center;
   --tw-bg-opacity: 1;
-  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   font-size: 0.875rem;
@@ -29,14 +31,11 @@ exports[`molecules/CookieNotification snapshot test 1`] = `
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 500ms;
 }
 
 .emotion-0>div>.acceptButton {
   --tw-bg-opacity: 1;
-  background-color: rgba(165, 180, 252, var(--tw-bg-opacity));
+  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
   font-weight: 700;
@@ -51,7 +50,7 @@ exports[`molecules/CookieNotification snapshot test 1`] = `
 
 .emotion-0>div>.acceptButton:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(199, 210, 254, var(--tw-bg-opacity));
+  background-color: rgba(30, 64, 175, var(--tw-bg-opacity));
 }
 
 .emotion-0>div>.declineButton {
@@ -82,7 +81,7 @@ exports[`molecules/CookieNotification snapshot test 1`] = `
     <div
       class=""
     >
-      This website uses cookies to enhance the user experience.
+      この Web サイトではユーザー体験向上のため cookie を使用しております。
     </div>
     <div
       class=""
@@ -92,7 +91,7 @@ exports[`molecules/CookieNotification snapshot test 1`] = `
         class="acceptButton"
         id="rcc-confirm-button"
       >
-        I understand
+        理解しました
       </button>
     </div>
   </div>

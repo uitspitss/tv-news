@@ -13,22 +13,11 @@ exports[`Layout snapshot test 1`] = `
 .emotion-0>main {
   height: calc(100% - 44px - 36px);
   min-height: calc(100vh - 44px - 36px);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .emotion-2 {
   --tw-bg-opacity: 1;
-  background-color: rgba(165, 180, 252, var(--tw-bg-opacity));
-  margin-bottom: 0.5rem;
-}
-
-@media (min-width: 1024px) {
-  .emotion-2 {
-    margin-bottom: 1rem;
-  }
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
 .emotion-2>nav {
@@ -124,49 +113,6 @@ exports[`Layout snapshot test 1`] = `
 }
 
 .emotion-4 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.25rem;
-  border-style: none;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.emotion-6 {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 1024px) {
-  .emotion-6 {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-  }
-}
-
-.emotion-6>a {
-  display: block;
-  margin-top: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .emotion-6>a {
-    display: inline-block;
-    margin-top: 0px;
-  }
-}
-
-.emotion-6>a:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -175,41 +121,34 @@ exports[`Layout snapshot test 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-@media (min-width: 640px) {
-  .emotion-8 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
-  .emotion-8 {
+  .emotion-4 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 
-.emotion-8>p {
+.emotion-4>.title {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
+  margin-right: 0.25rem;
 }
 
-.emotion-8>p>a {
+.emotion-4>.twitter {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
-  margin-left: 0.25rem;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -229,61 +168,8 @@ exports[`Layout snapshot test 1`] = `
             <a
               href="/"
             >
-              *WEBSITE TITLE*
+              TV局ニュースプレイリスト
             </a>
-          </div>
-          <div
-            class="toggleButton"
-          >
-            <button
-              class="emotion-4 emotion-5"
-              type="button"
-            >
-              <svg
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  class="closed"
-                  d="M4 6h16M4 12h16M4 18h16"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="menuList"
-          >
-            <div
-              class="emotion-6 emotion-7"
-            >
-              <a
-                href="/users-ssr"
-              >
-                Users SSR
-              </a>
-              <a
-                href="/users-ssg"
-              >
-                Users SSG
-              </a>
-              <a
-                href="/users-swr"
-              >
-                Users useSWR
-              </a>
-              <a
-                href="/users-recoil"
-              >
-                Users useUsers
-              </a>
-            </div>
           </div>
         </nav>
       </div>
@@ -297,20 +183,24 @@ exports[`Layout snapshot test 1`] = `
     </main>
     <footer>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4 emotion-5"
       >
-        <p>
+        <p
+          class="title"
+        >
           ©
-          2020 - 2021
-           *WEBSITE TITLE* —
-          <a
-            href="https://twitter.com/uitspitss"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            @uitspitss
-          </a>
+          2021
+           — 
+          TV局ニュースプレイリスト
         </p>
+        <a
+          class="twitter"
+          href="https://twitter.com/uitspitss"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          @uitspitss
+        </a>
       </div>
     </footer>
   </div>

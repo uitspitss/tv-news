@@ -1,11 +1,14 @@
-import React, { Fragment, memo, useMemo, VFC } from 'react';
+import React, { Fragment, memo, useCallback, useMemo, VFC } from 'react';
 import tw, { styled } from 'twin.macro';
 import { Popup } from 'react-mapbox-gl';
 
 import { Map as MyMap } from '~/components/molecules/Map';
 import { PlayerButton } from '~/components/molecules/PlayerButton';
 import { Button } from '~/components/atoms/buttons/Button';
-import { useCurrentTvStationState } from '~/hooks/use-current-tv-station';
+import {
+  useCurrentTvStationState,
+  useCurrentTvStationDispatch,
+} from '~/hooks/use-current-tv-station';
 import type { Prefecture } from '~/models/prefecture';
 import type { TvStation } from '~/models/tv-station';
 
@@ -29,19 +32,27 @@ export type IndexPageProps = {
 type Props = Readonly<{
   dataMap: DataMap;
   currentTvStation: TvStation | null;
+  handleRandomlyPlay: () => void;
 }> &
   IndexPageProps;
 
 const Component: VFC<Props> = (props) => {
-  const { className, prefectures, dataMap, currentTvStation } = props;
+  const {
+    className,
+    prefectures,
+    dataMap,
+    currentTvStation,
+    handleRandomlyPlay,
+  } = props;
 
   return (
     <div className={className}>
       <MyMap className="map">
         <>
           <div className="globalControls">
-            <Button className="button">他のプレイヤーを閉じる</Button>
-            <Button className="button">ランダム再生</Button>
+            <Button className="button" onClick={handleRandomlyPlay}>
+              ランダム再生
+            </Button>
           </div>
           {prefectures?.map((prefecture) =>
             dataMap.has(prefecture.name) ? (
@@ -62,9 +73,7 @@ const Component: VFC<Props> = (props) => {
                   <PlayerButton
                     className="playerButton"
                     key={data.name}
-                    playlistId={data.playlistId}
                     tvStation={data}
-                    // style={}
                   />
                 ))}
               </Popup>
@@ -106,6 +115,7 @@ const StyledComponent = styled(Component)`
 export const IndexPage = memo((props: IndexPageProps) => {
   const { prefectures, tvStations } = props;
   const currentTvStation = useCurrentTvStationState();
+  const setCurrentTvStation = useCurrentTvStationDispatch();
 
   const dataMap = useMemo(() => {
     const map: DataMap = new Map();
@@ -123,5 +133,17 @@ export const IndexPage = memo((props: IndexPageProps) => {
     return map;
   }, [prefectures, tvStations]);
 
-  return <StyledComponent {...props} {...{ dataMap, currentTvStation }} />;
+  const handleRandomlyPlay = useCallback(() => {
+    if (tvStations?.length) {
+      const index = Math.floor(Math.random() * tvStations.length);
+      setCurrentTvStation(tvStations[index]);
+    }
+  }, [setCurrentTvStation, tvStations]);
+
+  return (
+    <StyledComponent
+      {...props}
+      {...{ dataMap, currentTvStation, handleRandomlyPlay }}
+    />
+  );
 });

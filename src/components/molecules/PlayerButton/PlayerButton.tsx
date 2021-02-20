@@ -1,8 +1,19 @@
-import React, { lazy, memo, Suspense, useState, VFC } from 'react';
+import React, {
+  lazy,
+  memo,
+  Suspense,
+  useCallback,
+  useEffect,
+  useState,
+  VFC,
+} from 'react';
 import tw, { styled } from 'twin.macro';
 
 import { Button } from '~/components/atoms/buttons/Button';
-import { useCurrentTvStationDispatch } from '~/hooks/use-current-tv-station';
+import {
+  useCurrentTvStationDispatch,
+  useCurrentTvStationState,
+} from '~/hooks/use-current-tv-station';
 import { TvStation } from '~/models/tv-station';
 
 export type PlayerButtonProps = {
@@ -14,16 +25,12 @@ export type PlayerButtonProps = {
    * tv station name
    */
   tvStation: TvStation;
-  /**
-   * youtube playlist id
-   */
-  playlistId: string;
 };
 
 type Props = {
   playerActive: boolean;
   playerSize: { width: string; height: string };
-  handlePlayerActive: (active: boolean, tvStation: TvStation) => void;
+  handlePlayerActive: (tvStation: TvStation | null) => void;
   handlePlayerSize: (args: { width: number; height: number }) => void;
 } & PlayerButtonProps;
 
@@ -31,7 +38,6 @@ const Component: VFC<Props> = (props) => {
   const {
     className,
     tvStation,
-    playlistId,
     playerActive,
     playerSize,
     handlePlayerActive,
@@ -55,7 +61,7 @@ const Component: VFC<Props> = (props) => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
-                    // fill="currentColor"
+                    fill="currentColor"
                     width={16}
                     height={16}
                   >
@@ -98,7 +104,7 @@ const Component: VFC<Props> = (props) => {
               )}
               <Button
                 aria-label="close"
-                onClick={() => handlePlayerActive(false, tvStation)}
+                onClick={() => handlePlayerActive(null)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +129,8 @@ const Component: VFC<Props> = (props) => {
               height: playerSize.height,
               playerVars: {
                 listType: 'playlist',
-                list: playlistId,
+                list: tvStation.playlistId,
+                autoplay: 1,
               },
             }}
           />
@@ -132,7 +139,7 @@ const Component: VFC<Props> = (props) => {
         <Button
           className="handler"
           secondary
-          onClick={() => handlePlayerActive(true, tvStation)}
+          onClick={() => handlePlayerActive(tvStation)}
         >
           {tvStation.name}
         </Button>
@@ -157,21 +164,35 @@ const StyledComponent = styled(Component)`
  * button included YouTube player
  */
 export const PlayerButton = memo((props: PlayerButtonProps) => {
+  const { tvStation } = props;
+
   const [playerActive, setPlayerActive] = useState(false);
   const [playerSize, setPlayerSize] = useState({ width: '360', height: '203' });
   const setCurrentTvStation = useCurrentTvStationDispatch();
+  const currentTvStation = useCurrentTvStationState();
 
-  const handlePlayerActive = (active: boolean, tvStation: TvStation) => {
-    if (!active) {
+  const handlePlayerActive = useCallback(
+    (ts: TvStation | null) => {
+      setCurrentTvStation(ts);
+    },
+    [setCurrentTvStation],
+  );
+
+  const handlePlayerSize = useCallback(
+    (args: { width: number; height: number }) => {
+      setPlayerSize({ width: String(args.width), height: String(args.height) });
+    },
+    [setPlayerSize],
+  );
+
+  useEffect(() => {
+    if (tvStation.name === currentTvStation?.name) {
+      setPlayerActive(true);
+    } else {
       setPlayerSize({ width: '360', height: '203' });
+      setPlayerActive(false);
     }
-    setPlayerActive(active);
-    setCurrentTvStation(tvStation);
-  };
-
-  const handlePlayerSize = (args: { width: number; height: number }) => {
-    setPlayerSize({ width: String(args.width), height: String(args.height) });
-  };
+  }, [currentTvStation, tvStation]);
 
   return (
     <StyledComponent

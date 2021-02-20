@@ -19,7 +19,7 @@ exports[`SimpleForm snapshot test 1`] = `
   font-weight: 500;
   margin-bottom: 1rem;
   --tw-text-opacity: 1;
-  color: rgba(99, 102, 241, var(--tw-text-opacity));
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -84,7 +84,7 @@ exports[`SimpleForm snapshot test 1`] = `
 
 .emotion-0 .error-text {
   --tw-text-opacity: 1;
-  color: rgba(236, 72, 153, var(--tw-text-opacity));
+  color: rgba(99, 102, 241, var(--tw-text-opacity));
 }
 
 .emotion-2>input {
@@ -325,7 +325,7 @@ exports[`SimpleForm snapshot test 1`] = `
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
+  background-color: rgba(107, 114, 128, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(229, 231, 235, var(--tw-text-opacity));
   font-size: 1.125rem;

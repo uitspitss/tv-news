@@ -18,6 +18,9 @@ const Template: Story<PlayerButtonProps> = (args) => <PlayerButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  tvStationName: 'tv station name',
-  playlistId: 'UUSWOnDD1KIriGmyQ7SgNA4A',
+  tvStation: {
+    name: '仙台放送',
+    playlistId: 'UUlElfQ7F1QndkPEFuqrDCLQ',
+    prefectures: [{ name: '宮城県' }],
+  },
 };

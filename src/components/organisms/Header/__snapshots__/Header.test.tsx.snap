@@ -3,14 +3,7 @@
 exports[`Header snapshot test 1`] = `
 .emotion-0 {
   --tw-bg-opacity: 1;
-  background-color: rgba(165, 180, 252, var(--tw-bg-opacity));
-  margin-bottom: 0.5rem;
-}
-
-@media (min-width: 1024px) {
-  .emotion-0 {
-    margin-bottom: 1rem;
-  }
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
 .emotion-0>nav {
@@ -105,49 +98,6 @@ exports[`Header snapshot test 1`] = `
   }
 }
 
-.emotion-2 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.25rem;
-  border-style: none;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.emotion-4 {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 1024px) {
-  .emotion-4 {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-  }
-}
-
-.emotion-4>a {
-  display: block;
-  margin-top: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-
-@media (min-width: 1024px) {
-  .emotion-4>a {
-    display: inline-block;
-    margin-top: 0px;
-  }
-}
-
-.emotion-4>a:not(:last-child) {
-  margin-right: 1rem;
-}
-
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -159,61 +109,8 @@ exports[`Header snapshot test 1`] = `
         <a
           href="/"
         >
-          *WEBSITE TITLE*
+          TV局ニュースプレイリスト
         </a>
-      </div>
-      <div
-        class="toggleButton"
-      >
-        <button
-          class="emotion-2 emotion-3"
-          type="button"
-        >
-          <svg
-            fill="none"
-            height="24"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="closed"
-              d="M4 6h16M4 12h16M4 18h16"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="menuList"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <a
-            href="/users-ssr"
-          >
-            Users SSR
-          </a>
-          <a
-            href="/users-ssg"
-          >
-            Users SSG
-          </a>
-          <a
-            href="/users-swr"
-          >
-            Users useSWR
-          </a>
-          <a
-            href="/users-recoil"
-          >
-            Users useUsers
-          </a>
-        </div>
       </div>
     </nav>
   </div>

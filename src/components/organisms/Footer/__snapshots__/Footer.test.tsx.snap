@@ -10,21 +10,12 @@ exports[`Footer snapshot test 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-@media (min-width: 640px) {
-  .emotion-0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -34,17 +25,19 @@ exports[`Footer snapshot test 1`] = `
   }
 }
 
-.emotion-0>p {
+.emotion-0>.title {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
+  margin-right: 0.25rem;
 }
 
-.emotion-0>p>a {
+.emotion-0>.twitter {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
-  margin-left: 0.25rem;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -53,18 +46,22 @@ exports[`Footer snapshot test 1`] = `
   <div
     class="emotion-0 emotion-1"
   >
-    <p>
+    <p
+      class="title"
+    >
       ©
-      2020 - 2021
-       *WEBSITE TITLE* —
-      <a
-        href="https://twitter.com/uitspitss"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        @uitspitss
-      </a>
+      2021
+       — 
+      TV局ニュースプレイリスト
     </p>
+    <a
+      class="twitter"
+      href="https://twitter.com/uitspitss"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      @uitspitss
+    </a>
   </div>
 </div>
 `;
