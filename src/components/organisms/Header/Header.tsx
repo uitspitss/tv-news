@@ -2,7 +2,7 @@ import React, { memo, VFC, useState } from 'react';
 import tw, { styled } from 'twin.macro';
 import Link from 'next/link';
 
-import SEO from '~/next-seo.config';
+import SEO from '~/next-seo.config.json';
 
 export type HeaderProps = {
   /**

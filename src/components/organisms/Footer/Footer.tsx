@@ -1,7 +1,7 @@
 import React, { memo, VFC } from 'react';
 import tw, { styled } from 'twin.macro';
 
-import SEO from '~/next-seo.config';
+import SEO from '~/next-seo.config.json';
 import { copyrightYears } from '~/utils/copyright-years';
 
 export type FooterProps = {
