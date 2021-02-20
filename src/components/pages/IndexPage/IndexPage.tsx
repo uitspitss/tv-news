@@ -94,7 +94,7 @@ const StyledComponent = styled(Component)`
     height: calc(100vh - 44px - 36px);
 
     .globalControls {
-      ${tw`fixed top-12 right-4 flex flex-col items-end`}
+      ${tw`fixed z-50 top-12 right-4 flex flex-col items-end`}
 
       & > .button {
         ${tw`text-white text-sm`}
