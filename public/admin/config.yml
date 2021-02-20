@@ -5,14 +5,41 @@ media_folder: public/images
 public_folder: images
 
 collections:
-  - name: yml
-    label: ymlファイル
+- name: config
+    label: Config
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: next-seo-config
+        label: Next SEO Config
+        file: src/next-seo.config.json
+        fields:
+          - name: title
+            label: title
+            widget: string
+          - name: description
+            label: description
+            widget: string
+            pattern: ['.{,80}', 'Must have at maximum 80 characters']
+          - name: canonical
+            label: Site URL
+            widget: string
+          - name: openGraph
+            label: open graph
+            widget: object
+          - name: twitter
+            label: Twitter account
+            widget: string
+
+  - name: contents
+    label: Contents
     delete: false
     editor:
       preview: false
     files:
       - name: tv-stations
-        label: テレビ局リスト
+        label: Tv Stations
         file: src/contents/tv-stations.yml
         fields:
           - name: tv-stations
@@ -22,7 +49,7 @@ collections:
               - { label: テレビ局名, name: name, widget: string}
               - { label: プレイリストID, name: playlistId, widget: string}
               - name: prefectures
-                label: "所在地（都道府県）"
+                label: 所在地（都道府県）
                 widget: list
                 fields:
                   - name: name
@@ -30,12 +57,12 @@ collections:
                     collection: yml
                     file: prefectures
                     searchFields:
-                      - "prefectures.*.name"
+                      - prefectures.*.name
                     displayFields:
-                      - "prefectures.*.name"
-                    valueField: "prefectures.*.name"
+                      - prefectures.*.name
+                    valueField: prefectures.*.name
       - name: prefectures
-        label: 都道府県リスト
+        label: Prefectures
         file: src/contents/prefectures.yml
         fields:
           - name: prefectures

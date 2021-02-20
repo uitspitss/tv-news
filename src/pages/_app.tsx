@@ -11,7 +11,7 @@ import { CacheProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
 
 import * as gtag from '~/lib/gtag';
-import SEO from '~/next-seo.config';
+import SEO from '~/next-seo.config.json';
 import { Layout } from '~/components/templates/Layout';
 import { ToastContainer } from '~/components/molecules/ToastContainer';
 import { CookieNotification } from '~/components/molecules/CookieNotification';
