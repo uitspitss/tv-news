@@ -41,11 +41,27 @@ collections:
                 label: Url
                 widget: relation
                 collection: config
-                value_field: title
+                value_field: canonical
+                search_fields: [canonical]
+              - name: site_name
+                label: Site name
+                widget: relation
+                value_field: config
                 search_fields: [title]
           - name: twitter
-            label: Twitter account
-            widget: string
+            label: Twitter
+            widget: object
+            fields:
+              - name: handle
+                label: Creator @username
+                widget: string
+              - name: site
+                label: Site @username
+                widget: string
+              - name: cardType
+                label: Card type
+                widget: select
+                options: [summary, summary_large_image, app, player]
   - name: contents
     label: Contents
     delete: false
