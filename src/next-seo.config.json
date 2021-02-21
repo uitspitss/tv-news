@@ -20,11 +20,12 @@
         "height": 506,
         "alt": "tv news playlists"
       }
-    ]
+    ],
+    "description": "TV局のYouTubeチャンネルでニュース専用プレイリストをまとめたサイトです。"
   },
   "twitter": {
     "handle": "@uitspitss",
     "site": "@uitspitss",
-    "cardType": "summary_large_image"
+    "cardType": "app"
   }
 }
