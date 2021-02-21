@@ -21,7 +21,7 @@ collections:
           - name: description
             label: description
             widget: string
-            pattern: ['.{,80}', 'Must have at maximum 80 characters']
+            pattern: ['.{0,80}', 'Must have at maximum 80 characters']
           - name: canonical
             label: Site URL
             widget: string
@@ -32,22 +32,45 @@ collections:
               - name: type
                 label: Type
                 widget: select
-                options: ['website']
-              - name: locale
-                label: Locale
-                widget: select
-                options: ['ja_JP', 'en_US']
+                options: [website]
+                default: website
               - name: url
-                label: Url
+                label: URL
                 widget: relation
                 collection: config
                 value_field: canonical
                 search_fields: [canonical]
-              - name: site_name
-                label: Site name
+                default: canonical
+              - name: title
+                label: Title
                 widget: relation
-                value_field: config
+                collection: config
+                value_field: title
                 search_fields: [title]
+                default: title
+              - name: images
+                label: Images
+                widget: list
+                - name: url
+                  label: URL
+                  required: true
+                - name: width
+                  label: Width(px)
+                  widget: number
+                  required: true
+                - name: height
+                  label: Height(px)
+                  widget: number
+                  required: true
+                - name: alt
+                  Label: Alt text
+                  widget: string
+                  required: true
+              - name: locale
+                label: Locale
+                widget: select
+                options: ['ja_JP', 'en_US']
+                default: 'ja_JP'
           - name: twitter
             label: Twitter
             widget: object
@@ -62,6 +85,7 @@ collections:
                 label: Card type
                 widget: select
                 options: [summary, summary_large_image, app, player]
+                default: summary
   - name: contents
     label: Contents
     delete: false
