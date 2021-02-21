@@ -35,7 +35,7 @@ const Component: VFC<Props> = (props) => {
         </div>
         <div className="share">
           <FacebookShareButton className="button" url={SEO.canonical}>
-            <FacebookIcon size={24} />
+            <FacebookIcon size={24} round />
           </FacebookShareButton>
           <TwitterShareButton className="button" url={SEO.canonical}>
             <TwitterIcon size={24} round />
