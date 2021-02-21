@@ -1,6 +1,12 @@
 import React, { memo, VFC, useState } from 'react';
 import tw, { styled } from 'twin.macro';
 import Link from 'next/link';
+import {
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon,
+} from 'next-share';
 
 import SEO from '~/next-seo.config.json';
 
@@ -21,11 +27,19 @@ const Component: VFC<Props> = (props) => {
 
   return (
     <div className={className}>
-      <nav>
+      <nav className="nav">
         <div className="title">
           <Link href="/">
             <a>{SEO.title}</a>
           </Link>
+        </div>
+        <div className="share">
+          <FacebookShareButton className="button" url={SEO.canonical}>
+            <FacebookIcon size={24} />
+          </FacebookShareButton>
+          <TwitterShareButton className="button" url={SEO.canonical}>
+            <TwitterIcon size={24} round />
+          </TwitterShareButton>
         </div>
       </nav>
     </div>
@@ -35,20 +49,19 @@ const Component: VFC<Props> = (props) => {
 const StyledComponent = styled(Component)`
   & {
     ${tw`bg-primary-700`}
-    & > nav {
-      ${tw`flex flex-wrap items-center justify-between py-2 px-2 lg:px-6`}
+    & > .nav {
+      ${tw`flex items-center justify-between py-2 px-2 lg:px-6`}
 
       & > .title {
         ${tw`flex items-center flex-shrink-0 mr-6 text-gray-100 font-semibold text-xl tracking-tight`}
       }
 
-      & > .toggleButton {
-        ${tw`flex lg:hidden`}
-      }
+      & > .share {
+        ${tw`flex items-center`}
 
-      & > .menuList {
-        ${tw`w-full flex-grow lg:flex lg:items-center lg:w-auto`}
-        ${({ isOpen }) => (isOpen ? tw`block` : tw`hidden lg:block`)}
+        & > :not(.button:last-child) {
+          ${tw`mr-2`}
+        }
       }
     }
   }
