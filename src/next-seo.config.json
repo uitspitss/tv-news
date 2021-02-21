@@ -5,8 +5,23 @@
   "openGraph": {
     "type": "website",
     "locale": "ja_JP",
-    "url": "https://www.url.ie/",
-    "site_name": "TV局ニュースプレイリスト"
+    "url": "https://tv-news.uitspitss.dev",
+    "site_name": "TV局ニュースプレイリスト",
+    "title": "TV局ニュースプレイリスト",
+    "images": [
+      {
+        "url": "https://tv-news.uitspitss.dev/images/og-image-square.jpg",
+        "width": 600,
+        "height": 600,
+        "alt": "tv news playlists"
+      },
+      {
+        "url": "https://tv-news.uitspitss.dev/images/og-image-landscape.jpg",
+        "width": 1012,
+        "height": 506,
+        "alt": "tv news playlists"
+      }
+    ]
   },
   "twitter": {
     "handle": "@uitspitss",
