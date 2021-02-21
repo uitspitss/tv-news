@@ -32,11 +32,20 @@ collections:
               - name: type
                 label: Type
                 widget: select
-                options: ['website', '']
+                options: ['website']
+              - name: locale
+                label: Locale
+                widget: select
+                options: ['ja_JP', 'en_US']
+              - name: url
+                label: Url
+                widget: relation
+                collection: config
+                value_field: title
+                search_field: [title]
           - name: twitter
             label: Twitter account
             widget: string
-
   - name: contents
     label: Contents
     delete: false
