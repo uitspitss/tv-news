@@ -18,6 +18,16 @@ collections:
           - name: title
             label: title
             widget: string
+          - name: titleTemplate
+            label: title template
+            widget: string
+          - name: defaultTitle
+            label: defaultTitle
+            widget: relation
+            collection: config
+            value_field: title
+            search_fields: [title]
+            default: title
           - name: description
             label: Description
             widget: string
@@ -92,7 +102,7 @@ collections:
               - name: cardType
                 label: Card type
                 widget: select
-                options: [summary, summary_large_image, app, player]
+                options: [summary, summary_large_image, player]
                 default: summary
   - name: contents
     label: Contents
