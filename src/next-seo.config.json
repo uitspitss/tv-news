@@ -28,7 +28,7 @@
   "twitter": {
     "handle": "@uitspitss",
     "site": "@uitspitss",
-    "cardType": "app"
+    "cardType": "summary"
   },
   "robotsProps": {
     "noarchive": true
