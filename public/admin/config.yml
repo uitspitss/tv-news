@@ -42,7 +42,7 @@ collections:
                 widget: relation
                 collection: config
                 value_field: title
-                search_field: [title]
+                search_fields: [title]
           - name: twitter
             label: Twitter account
             widget: string
