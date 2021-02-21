@@ -19,14 +19,14 @@ collections:
             label: title
             widget: string
           - name: description
-            label: description
+            label: Description
             widget: string
             pattern: ['.{0,80}', 'Must have at maximum 80 characters']
           - name: canonical
             label: Site URL
             widget: string
           - name: openGraph
-            label: open graph
+            label: Open Graph
             widget: object
             fields:
               - name: type
@@ -72,6 +72,13 @@ collections:
                 widget: select
                 options: [ja_JP, en_US]
                 default: ja_JP
+              - name: description
+                label: Description
+                widget: relation
+                collection: config
+                value_field: description
+                search_fields: [description]
+                default: description
           - name: twitter
             label: Twitter
             widget: object
