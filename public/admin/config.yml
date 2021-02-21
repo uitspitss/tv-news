@@ -51,26 +51,27 @@ collections:
               - name: images
                 label: Images
                 widget: list
-                - name: url
-                  label: URL
-                  required: true
-                - name: width
-                  label: Width(px)
-                  widget: number
-                  required: true
-                - name: height
-                  label: Height(px)
-                  widget: number
-                  required: true
-                - name: alt
-                  Label: Alt text
-                  widget: string
-                  required: true
+                fields:
+                  - name: url
+                    label: URL
+                    required: true
+                  - name: width
+                    label: Width(px)
+                    widget: number
+                    required: true
+                  - name: height
+                    label: Height(px)
+                    widget: number
+                    required: true
+                  - name: alt
+                    Label: Alt text
+                    widget: string
+                    required: true
               - name: locale
                 label: Locale
                 widget: select
-                options: ['ja_JP', 'en_US']
-                default: 'ja_JP'
+                options: [ja_JP, en_US]
+                default: ja_JP
           - name: twitter
             label: Twitter
             widget: object
@@ -100,8 +101,12 @@ collections:
             label: テレビ局
             widget: list
             fields:
-              - { label: テレビ局名, name: name, widget: string}
-              - { label: プレイリストID, name: playlistId, widget: string}
+              - label: テレビ局名
+                name: name
+                widget: string
+              - label: プレイリストID
+                name: playlistId
+                widget: string
               - name: prefectures
                 label: 所在地（都道府県）
                 widget: list
@@ -123,6 +128,12 @@ collections:
             label: 都道府県
             widget: list
             fields:
-              - { label: 都道府県名, name: name, widget: string}
-              - { label: 緯度, name: lat, widget: number}
-              - { label: 経度, name: lng, widget: number}
+              - label: 都道府県名
+                name: name
+                widget: string
+              - label: 緯度
+                name: lat
+                widget: number
+              - label: 経度
+                name: lng
+                widget: number
