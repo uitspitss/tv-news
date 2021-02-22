@@ -19,7 +19,7 @@ const Component: VFC<Props> = (props) => {
   return (
     <div className={className}>
       <p className="title">
-        ©{copyrightYears(2021)} — {SEO.defaultTitle}
+        ©{copyrightYears(2021)} — {SEO.title}
       </p>
       <a
         className="twitter"

@@ -30,7 +30,7 @@ const Component: VFC<Props> = (props) => {
       <nav className="nav">
         <div className="title">
           <Link href="/">
-            <a>{SEO.defaultTitle}</a>
+            <a>{SEO.title}</a>
           </Link>
         </div>
         <div className="share">

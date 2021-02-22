@@ -18,16 +18,6 @@ collections:
           - name: title
             label: Title
             widget: string
-          - name: titleTemplate
-            label: title template
-            widget: string
-          - name: defaultTitle
-            label: defaultTitle
-            widget: relation
-            collection: config
-            value_field: title
-            search_fields: [title]
-            default: title
           - name: description
             label: Description
             widget: string

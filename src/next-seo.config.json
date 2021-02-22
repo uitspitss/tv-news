@@ -1,7 +1,5 @@
 {
   "title": "TV局ニュースプレイリスト",
-  "titleTemplate": "%s | TV局ニュースプレイリスト",
-  "defaultTitle": "TV局ニュースプレイリスト",
   "description": "TV局のYouTubeチャンネルのニュース専用プレイリストをまとめたサイトです。",
   "canonical": "https://tv-news.uitspitss.dev",
   "openGraph": {
