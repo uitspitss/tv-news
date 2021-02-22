@@ -1,5 +1,4 @@
 {
-  "title": "TV局ニュースプレイリスト",
   "titleTemplate": "%s | TV局ニュースプレイリスト",
   "defaultTitle": "TV局ニュースプレイリスト",
   "description": "TV局のYouTubeチャンネルのニュース専用プレイリストをまとめたサイトです。",
@@ -9,6 +8,7 @@
     "locale": "ja_JP",
     "url": "https://tv-news.uitspitss.dev",
     "title": "TV局ニュースプレイリスト",
+    "description": "TV局のYouTubeチャンネルのニュース専用プレイリストをまとめたサイトです。",
     "images": [
       {
         "url": "https://tv-news.uitspitss.dev/images/og-image-square.jpg",
@@ -22,15 +22,11 @@
         "height": 506,
         "alt": "tv news playlists"
       }
-    ],
-    "description": "TV局のYouTubeチャンネルのニュース専用プレイリストをまとめたサイトです。"
+    ]
   },
   "twitter": {
     "handle": "@uitspitss",
     "site": "@uitspitss",
     "cardType": "summary"
-  },
-  "robotsProps": {
-    "noarchive": true
   }
 }
