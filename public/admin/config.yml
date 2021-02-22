@@ -15,9 +15,6 @@ collections:
         label: Next SEO Config
         file: src/next-seo.config.json
         fields:
-          - name: title
-            label: title
-            widget: string
           - name: titleTemplate
             label: title template
             widget: string
