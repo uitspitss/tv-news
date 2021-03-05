@@ -1,5 +1,52 @@
 {
   "extends": [
-    "config:base"
-  ]
+    ":label(renovate)",
+    ":timezone(Asia/Tokyo)",
+    ":prNotPending",
+    ":prConcurrentLimit10"
+  ],
+  "npm": {
+    "extends": [
+      "config:base",
+      ":automergePatch",
+      ":noUnscheduledUpdates",
+      "npm:unpublishSafe"
+    ],
+    "schedule": [
+      "after 10pm every weekday",
+      "before 5am every weekday",
+      "every weekend"
+    ],
+    "rangeStrategy": "bump",
+    "lockFileMaintenance": {
+      "enabled": true,
+      "schedule": ["before 3am on the first day of the month"]
+    },
+    "packageRules": [
+      {
+        "packagePatterns": ["^@types/"],
+        "automerge": true,
+        "major": {
+          "automerge": false
+        }
+      },
+      {
+        "groupName": "linters",
+        "extends": ["packages:linters"],
+        "packageNames": ["prettier"],
+        "packagePatterns": ["^@typescript-eslint/"]
+      },
+      {
+        "description": "automerge minor updates of widely used libraries in devDeps",
+        "matchUpdateTypes": ["minor"],
+        "matchDepTypes": ["devDependencies"],
+        "automerge": true
+      },
+      {
+        "description": "disable package.json > engines update",
+        "matchDepTypes": ["engines"],
+        "enabled": false
+      }
+    ]
+  }
 }
