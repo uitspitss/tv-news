@@ -18,6 +18,7 @@
       "every weekend"
     ],
     "rangeStrategy": "bump",
+    "postupdateOptions": ["yarnDedupeFewer"],
     "lockFileMaintenance": {
       "enabled": true,
       "schedule": ["before 3am on the first day of the month"]
