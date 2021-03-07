@@ -117,7 +117,7 @@
     "tailwindcss": "2.0.3",
     "ts-jest": "26.5.3",
     "ts-node-dev": "1.1.6",
-    "twin.macro": "2.2.3",
+    "twin.macro": "2.3.0",
     "typescript": "4.1.5",
     "yaml-jest": "1.0.5",
     "yaml-loader": "0.6.0",
