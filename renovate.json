@@ -17,7 +17,7 @@
       "before 5am every weekday",
       "every weekend"
     ],
-    "rangeStrategy": "bump",
+    "rangeStrategy": "pin",
     "postUpdateOptions": ["yarnDedupeFewer"],
     "lockFileMaintenance": {
       "enabled": true,
