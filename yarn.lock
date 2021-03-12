@@ -11934,7 +11934,20 @@ react-dev-utils@^11.0.3:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-docgen-typescript-plugin@0.6.3, react-docgen-typescript-plugin@^0.6.2:
+react-docgen-typescript-plugin@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript-plugin/-/react-docgen-typescript-plugin-0.7.0.tgz#997a7f21f94c4f639f5e3625c035d318961d9cf8"
+  integrity sha512-u8Suk4Vf7BqiHySNeZysB+wDgRmlBXf8z+S32PM/0WREHE5sSxsrwqyKJNVLLiIPvMzeT7RUBNF7ZfALsGWzMA==
+  dependencies:
+    debug "^4.1.1"
+    endent "^2.0.1"
+    find-cache-dir "^3.3.1"
+    flat-cache "^3.0.4"
+    micromatch "^4.0.2"
+    react-docgen-typescript "^1.20.5"
+    tslib "^2.0.0"
+
+react-docgen-typescript-plugin@^0.6.2:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript-plugin/-/react-docgen-typescript-plugin-0.6.3.tgz#664b22601df083597ecb1e60bd21beca60125fdf"
   integrity sha512-av1S/fmWBNFGgNa4qtkidFjjOz23eEi6EdCtwSWo9WNhGzUMyMygbD/DosMWoeFlZpk9R3MXPkRE7PDH6j5GMQ==
