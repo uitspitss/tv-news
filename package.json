@@ -67,7 +67,7 @@
     "@testing-library/react-hooks": "5.1.0",
     "@testing-library/user-event": "12.8.3",
     "@types/jest": "26.0.20",
-    "@types/mapbox-gl": "2.1.0",
+    "@types/mapbox-gl": "2.1.1",
     "@types/react": "16.14.5",
     "@types/react-select": "4.0.13",
     "@typescript-eslint/eslint-plugin": "4.18.0",
