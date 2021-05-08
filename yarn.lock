@@ -10480,10 +10480,10 @@ next-seo@4.24.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.24.0.tgz#7c0447da00b8574dcda5c6979771a7f6efd24f55"
   integrity sha512-9VQXfXAelhE+hAWzJ4azigQaW3FPX0kU0eYKFQXKsQjgY7AWtukjRGXls0oSIk8khhDJwmCt46EwsO9n5DDW6Q==
 
-next-share@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.0.2.tgz#1c09c0d9c0132c2d3ea000abc930102b9e2c7dc8"
-  integrity sha512-vHUKx+Mx9mEKoHlFulFdA50KLqoVGcVWm+TqySEHx0j+MGV3QzECh03Fz+PzrCr0cZeykF21qg0YVt3j+e5XZA==
+next-share@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.3.0.tgz#448e92caa2072550ee1699d7d7efd0557bbf5a09"
+  integrity sha512-sftuVJ/oWqqDjtJYpG7CyT1ucL3EXlDD+JPBqn6+dNqsLcffzvTuOk30GhopcXfKHG9JJix5IrTa0T4Tp+f0dA==
 
 next@10.2.0:
   version "10.2.0"
