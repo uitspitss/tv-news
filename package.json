@@ -105,7 +105,7 @@
     "reg-notify-github-plugin": "0.10.14",
     "reg-publish-s3-plugin": "0.10.10",
     "reg-suit": "0.10.14",
-    "sass-loader": "11.0.1",
+    "sass-loader": "11.1.0",
     "style-loader": "2.0.0",
     "stylelint": "13.13.1",
     "stylelint-config-prettier": "8.0.2",
