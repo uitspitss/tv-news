@@ -114,7 +114,7 @@
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-prettier": "1.2.0",
     "stylelint-scss": "3.19.0",
-    "tailwindcss": "2.1.2",
+    "tailwindcss": "2.1.4",
     "ts-jest": "26.5.6",
     "ts-node-dev": "1.1.6",
     "twin.macro": "2.4.2",
