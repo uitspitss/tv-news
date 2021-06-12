@@ -5745,6 +5745,11 @@ deepmerge@^4.2.2:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
   integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
+define-lazy-prop@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz#3f7ae421129bcaaac9bc74905c98a0009ec9ee7f"
+  integrity sha512-Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==
+
 define-properties@^1.1.2, define-properties@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
@@ -8437,10 +8442,10 @@ is-descriptor@^1.0.0, is-descriptor@^1.0.2:
     is-data-descriptor "^1.0.0"
     kind-of "^6.0.2"
 
-is-docker@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.1.1.tgz#4125a88e44e450d384e09047ede71adc2d144156"
-  integrity sha512-ZOoqiXfEwtGknTiuDEy8pN2CfE3TxMHprvNer1mXiqwkOT77Rw3YVrUQ52EqAOU3QAWDQ+bQdx7HJzrv7LS2Hw==
+is-docker@^2.0.0, is-docker@^2.1.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.2.1.tgz#33eeabe23cfe86f14bde4408a02c0cfb853acdaa"
+  integrity sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==
 
 is-dom@^1.0.0:
   version "1.1.0"
@@ -10874,13 +10879,22 @@ onetime@^5.1.0, onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-open@^7.0.2, open@^7.0.3, open@^7.2.1:
+open@^7.0.2, open@^7.0.3:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/open/-/open-7.3.1.tgz#111119cb919ca1acd988f49685c4fdd0f4755356"
   integrity sha512-f2wt9DCBKKjlFbjzGb8MOAW8LH8F0mrs1zc7KTjAJ9PZNQbfenzWbNP1VZJvw6ICMG9r14Ah6yfwPn7T7i646A==
   dependencies:
     is-docker "^2.0.0"
     is-wsl "^2.1.1"
+
+open@^8.0.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/open/-/open-8.2.0.tgz#d6a4788b00009a9d60df471ecb89842a15fdcfc1"
+  integrity sha512-O8uInONB4asyY3qUcEytpgwxQG3O0fJ/hlssoUHsBboOIRVZzT6Wq+Rwj5nffbeUhOdMjpXeISpDDzHCMRDuOQ==
+  dependencies:
+    define-lazy-prop "^2.0.0"
+    is-docker "^2.1.1"
+    is-wsl "^2.2.0"
 
 optionator@^0.8.1:
   version "0.8.3"
@@ -12497,39 +12511,39 @@ reg-keygen-git-hash-plugin@0.10.16:
     reg-suit-util "^0.10.16"
     shell-escape "^0.2.0"
 
-reg-notify-github-plugin@0.10.14:
-  version "0.10.14"
-  resolved "https://registry.yarnpkg.com/reg-notify-github-plugin/-/reg-notify-github-plugin-0.10.14.tgz#507fe53a7b8a95277b3f7a10e6897175dddb6cfa"
-  integrity sha512-G8NOzG3vnI8dqhrJCHn2oHgKlHnbeqcHF0FmujVuDl25OUIrkfLHhT34AopWcSgk6gn/IXgF+S6n/OUJ+iB2Cw==
+reg-notify-github-plugin@0.10.16:
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/reg-notify-github-plugin/-/reg-notify-github-plugin-0.10.16.tgz#aec821c179807f9f69156560c75fb396d7e78622"
+  integrity sha512-uZ4E+6ci7deE64OCw6Pt8D6CdIfxFWNap8hAsNlBDgTOEA2wrAz2mqDI9Q2ltU8P2EP/+5+tys8Qr77D1RSWhg==
   dependencies:
-    open "^7.2.1"
+    open "^8.0.0"
     reg-gh-app-interface "^1.2.0"
-    reg-suit-util "^0.10.10"
+    reg-suit-util "^0.10.16"
     request "^2.88.2"
     request-promise "^4.2.6"
     tiny-commit-walker "^1.1.2"
 
-reg-publish-s3-plugin@0.10.10:
-  version "0.10.10"
-  resolved "https://registry.yarnpkg.com/reg-publish-s3-plugin/-/reg-publish-s3-plugin-0.10.10.tgz#dea357db96804fb05cac9985b26c9c6929131053"
-  integrity sha512-WJrFD4REI0HR1gLB6eVPpfYAAKQn/rekP1n70ndcxm9pVqX+FXETKhBNEiFXdf36EKLuJW7Sw1p3NN91eSIAuA==
+reg-publish-s3-plugin@0.10.16:
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/reg-publish-s3-plugin/-/reg-publish-s3-plugin-0.10.16.tgz#34c5492f03e3103ffbbafea1c84fd69bdc440324"
+  integrity sha512-+31Lf0o4cPlOskmtOy8nt783r2c6JSQfWmOxwKg733gpzNL8PLaD5zSdrvQO7qmTHnqNvan9uRnhPbrKbokvmA==
   dependencies:
     aws-sdk "^2.755.0"
     mkdirp "^1.0.4"
-    reg-suit-util "^0.10.10"
+    reg-suit-util "^0.10.16"
     uuid "^8.3.0"
 
-reg-suit-core@^0.10.14:
-  version "0.10.14"
-  resolved "https://registry.yarnpkg.com/reg-suit-core/-/reg-suit-core-0.10.14.tgz#f98774395469ec74fa0477787df886766c97ba1a"
-  integrity sha512-S0Mri6HOWR4O7xcWHGveHkJ8CRkEaaEMvUDGUVHUclPlQcy3B0cL7yiCdMeH8VEgRRVM/7a3BqfPMC+dQj9kIA==
+reg-suit-core@^0.10.16:
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/reg-suit-core/-/reg-suit-core-0.10.16.tgz#e2b4acf9d024bf6e5c0204db81b91490c0bea4e2"
+  integrity sha512-JcMapHjU63flo7S4n/9pTBh7YPN7Lc1MgDPHbI81JSMRj4bZG/ggXFAznu9rmVVZfhCdfW/gLNENo5Ci7J4hjA==
   dependencies:
     cpx "^1.5.0"
     reg-cli "^0.17.0"
-    reg-suit-util "^0.10.10"
+    reg-suit-util "^0.10.16"
     rimraf "^3.0.2"
 
-reg-suit-util@^0.10.10, reg-suit-util@^0.10.16:
+reg-suit-util@^0.10.16:
   version "0.10.16"
   resolved "https://registry.yarnpkg.com/reg-suit-util/-/reg-suit-util-0.10.16.tgz#958028ab74a7968fcc69c350c1906353c7fdc550"
   integrity sha512-Ul5SqlIgEoO/RU5FkQkj2E6vwHzldvINg5YIbwUQ4KIIHmiXCvyHRNj1mdUMYuGaGRGfET/NwuLOyvYfinCzOA==
@@ -12548,17 +12562,17 @@ reg-suit-util@^0.10.10, reg-suit-util@^0.10.16:
     mime-types "^2.1.27"
     mkdirp "^1.0.4"
 
-reg-suit@0.10.14:
-  version "0.10.14"
-  resolved "https://registry.yarnpkg.com/reg-suit/-/reg-suit-0.10.14.tgz#c38a37f071b73f2e2e4f61c9cebb5f5d4d47b6a3"
-  integrity sha512-95pEIzpWGf1j45LASB1cSSnman82XIjz2DJ1wqLzh3ScroSnRvdDFU/I26BhBqqsm8ydHWdEOQfVS3w/Bj96ew==
+reg-suit@0.10.16:
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/reg-suit/-/reg-suit-0.10.16.tgz#2fc67e327c02c9ae478264b8b7cde4eae4d65f50"
+  integrity sha512-GXI6poPdXF1ni5VlmhL8cM7GmmCAbRCKmMmTTzGsSLQax/nUhlc+4JSC7O15nG9Ki3Rk7uWXx2THZgJpKo8iSQ==
   dependencies:
     cp-file "9.0.0"
     ignore "5.1.8"
     inquirer "7.3.3"
-    reg-suit-core "^0.10.14"
-    reg-suit-util "^0.10.10"
-    yargs "16.2.0"
+    reg-suit-core "^0.10.16"
+    reg-suit-util "^0.10.16"
+    yargs "17.0.1"
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
@@ -15400,10 +15414,10 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs@16.2.0:
-  version "16.2.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
-  integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
+yargs@17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.0.1.tgz#6a1ced4ed5ee0b388010ba9fd67af83b9362e0bb"
+  integrity sha512-xBBulfCc8Y6gLFcrPvtqKz9hz8SO0l1Ni8GgDekvBX2ro0HRQImDGnikfc33cgzcYUSncapnNcZDjVFIH3f6KQ==
   dependencies:
     cliui "^7.0.2"
     escalade "^3.1.1"
