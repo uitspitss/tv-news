@@ -26,7 +26,7 @@
     "@sentry/integrations": "6.5.1",
     "@sentry/node": "6.5.1",
     "@sentry/webpack-plugin": "1.15.1",
-    "@tailwindcss/forms": "0.3.2",
+    "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/typography": "0.4.1",
     "@zeit/next-source-maps": "0.0.3",
     "date-fns": "2.21.3",
