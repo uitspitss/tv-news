@@ -1,12 +1,6 @@
-import React, {
-  lazy,
-  memo,
-  Suspense,
-  useCallback,
-  useEffect,
-  useState,
-  VFC,
-} from 'react';
+import React, { memo, useCallback, useEffect, useState, VFC } from 'react';
+import dynamic from 'next/dynamic';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 import { Button } from '~/components/atoms/buttons/Button';
@@ -44,12 +38,15 @@ const Component: VFC<Props> = (props) => {
     handlePlayerSize,
   } = props;
 
-  const YouTube = lazy(() => import('react-youtube'));
+  const YouTube = dynamic(() => import('react-youtube'), {
+    loading: () => <p>loading player...</p>,
+    ssr: false,
+  });
 
   return (
     <div className={className}>
       {playerActive ? (
-        <Suspense fallback="loading player...">
+        <div className="activePlayer">
           <div className="playerHeader">
             <div className="stationName">{tvStation.name}</div>
             <div className="controls">
@@ -134,7 +131,7 @@ const Component: VFC<Props> = (props) => {
               },
             }}
           />
-        </Suspense>
+        </div>
       ) : (
         <Button
           className="handler"
