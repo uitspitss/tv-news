@@ -51,12 +51,7 @@ const Component: VFC<Props> = (props) => {
             <div className="stationName">{tvStation.name}</div>
             <div className="controls">
               {playerSize.width === '360' ? (
-                <Button
-                  aria-label="expand"
-                  onClick={() =>
-                    handleExpandPlayer({ width: 540, height: 304 })
-                  }
-                >
+                <Button aria-label="expand" onClick={handleExpandPlayer}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -74,12 +69,7 @@ const Component: VFC<Props> = (props) => {
                   </svg>
                 </Button>
               ) : (
-                <Button
-                  aria-label="shrink"
-                  onClick={() =>
-                    handleExpandPlayer({ width: 360, height: 203 })
-                  }
-                >
+                <Button aria-label="shrink" onClick={handleExpandPlayer}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={16}
