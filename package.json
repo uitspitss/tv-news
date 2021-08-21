@@ -29,7 +29,7 @@
     "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/typography": "0.4.1",
     "@zeit/next-source-maps": "0.0.3",
-    "date-fns": "2.22.1",
+    "date-fns": "2.23.0",
     "graphql": "15.5.1",
     "graphql-request": "3.4.0",
     "next": "11.1.0",
