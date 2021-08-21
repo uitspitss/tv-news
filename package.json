@@ -65,7 +65,7 @@
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "11.2.7",
     "@testing-library/react-hooks": "7.0.1",
-    "@testing-library/user-event": "13.1.9",
+    "@testing-library/user-event": "13.2.1",
     "@types/jest": "26.0.24",
     "@types/mapbox-gl": "2.3.3",
     "@types/react": "17.0.19",
