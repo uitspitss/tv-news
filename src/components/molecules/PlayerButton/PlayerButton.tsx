@@ -25,7 +25,7 @@ type Props = {
   playerActive: boolean;
   playerSize: { width: string; height: string };
   handlePlayerActive: (tvStation: TvStation | null) => void;
-  handlePlayerSize: (args: { width: number; height: number }) => void;
+  handleExpandPlayer: () => void;
 } & PlayerButtonProps;
 
 const Component: VFC<Props> = (props) => {
@@ -35,7 +35,7 @@ const Component: VFC<Props> = (props) => {
     playerActive,
     playerSize,
     handlePlayerActive,
-    handlePlayerSize,
+    handleExpandPlayer,
   } = props;
 
   const YouTube = dynamic(() => import('react-youtube'), {
@@ -53,7 +53,9 @@ const Component: VFC<Props> = (props) => {
               {playerSize.width === '360' ? (
                 <Button
                   aria-label="expand"
-                  onClick={() => handlePlayerSize({ width: 540, height: 304 })}
+                  onClick={() =>
+                    handleExpandPlayer({ width: 540, height: 304 })
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +76,9 @@ const Component: VFC<Props> = (props) => {
               ) : (
                 <Button
                   aria-label="shrink"
-                  onClick={() => handlePlayerSize({ width: 360, height: 203 })}
+                  onClick={() =>
+                    handleExpandPlayer({ width: 360, height: 203 })
+                  }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +150,7 @@ const Component: VFC<Props> = (props) => {
 };
 
 const StyledComponent = styled(Component)`
-  ${tw`py-1`}
+  ${tw`py-1 flex justify-center`}
 
   & > .playerHeader {
     ${tw`w-full flex justify-between items-center text-primary-300`}
@@ -175,12 +179,15 @@ export const PlayerButton = memo((props: PlayerButtonProps) => {
     [setCurrentTvStation],
   );
 
-  const handlePlayerSize = useCallback(
-    (args: { width: number; height: number }) => {
-      setPlayerSize({ width: String(args.width), height: String(args.height) });
-    },
-    [setPlayerSize],
-  );
+  const handleExpandPlayer = useCallback(() => {
+    const width =
+      playerSize.width === '360' ? document.body.clientWidth * 0.9 : 360;
+    const height = (width * 9) / 16;
+    setPlayerSize({
+      width: String(width),
+      height: String(height),
+    });
+  }, [playerSize.width, setPlayerSize]);
 
   useEffect(() => {
     if (tvStation.name === currentTvStation?.name) {
@@ -194,7 +201,7 @@ export const PlayerButton = memo((props: PlayerButtonProps) => {
   return (
     <StyledComponent
       {...props}
-      {...{ playerActive, playerSize, handlePlayerActive, handlePlayerSize }}
+      {...{ playerActive, playerSize, handlePlayerActive, handleExpandPlayer }}
     />
   );
 });

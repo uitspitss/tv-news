@@ -103,8 +103,14 @@ const StyledComponent = styled(Component)`
     }
 
     .popup {
+      &:hover {
+        ${tw`z-10`}
+      }
+      &:hover > .mapboxgl-popup-content {
+        ${tw`z-10`}
+      }
       & > .mapboxgl-popup-content {
-        ${tw`bg-gray-700 bg-opacity-0 text-primary-300`}
+        ${tw`bg-gray-700 bg-opacity-0 text-primary-300 z-0`}
       }
     }
   }
