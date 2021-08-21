@@ -10716,10 +10716,10 @@ next-seo@4.26.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.26.0.tgz#4218cfae5651fdc2e330dcdf1cc1b34ce199d41c"
   integrity sha512-5TqywQ3XAwqdmEU1AyNZjR7WdDKFTkDD8aBtgQelPvzBUEy8i0mTjtiw+09jhiHFNik6FqS8uPKCaYcY6jRgSQ==
 
-next-share@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.7.0.tgz#6e2d0bf595a65a6362698525180134427c1058df"
-  integrity sha512-VyOOySm/DJFVj0mI87Eym1koHc6JDlkyYWDMXVfnRSElG6czeIEj/Nz3Kor4MpA3z2k1TiKIfz+YjoIDcIVwvA==
+next-share@0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/next-share/-/next-share-0.12.1.tgz#d3d02d010466bcc856f9885fef0a05590d5f1a57"
+  integrity sha512-O0AqQOmRT4ID/47vKNzmCKkC/4w69yKyLBuXzigf+iWQVgG+keBZezi8jFDE5CuUDK1ZOulqNrfZZCNXOog2XA==
 
 next@11.1.0:
   version "11.1.0"
