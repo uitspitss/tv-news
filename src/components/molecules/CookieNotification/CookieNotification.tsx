@@ -1,4 +1,5 @@
 import React, { memo, VFC, useCallback } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 import CookieConsent from 'react-cookie-consent';
 

@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import { AppProps } from 'next/app';
-import getConfig from 'next/config';
 import { useRouter } from 'next/router';
 import { RecoilRoot } from 'recoil';
-import * as Sentry from '@sentry/node';
-import { RewriteFrames } from '@sentry/integrations';
 import { DefaultSeo } from 'next-seo';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { GlobalStyles } from 'twin.macro';
 import { CacheProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
@@ -16,29 +14,6 @@ import { Layout } from '~/components/templates/Layout';
 import { ToastContainer } from '~/components/molecules/ToastContainer';
 import { CookieNotification } from '~/components/molecules/CookieNotification';
 // import '~/styles/global.css';
-
-const isProd = process.env.NODE_ENV === 'production';
-
-if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
-  const config = getConfig();
-  const distDir = `${config.serverRuntimeConfig.rootDir}/.next`;
-  Sentry.init({
-    enabled: isProd,
-    integrations: [
-      new RewriteFrames({
-        iteratee: (frame) => {
-          // eslint-disable-next-line
-          // @ts-ignore
-          // eslint-disable-next-line
-          frame.filename = frame.filename.replace(distDir, 'app:///_next');
-
-          return frame;
-        },
-      }),
-    ],
-    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  });
-}
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();

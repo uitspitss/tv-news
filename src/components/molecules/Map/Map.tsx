@@ -1,5 +1,6 @@
 import React, { memo, FC, ReactElement } from 'react';
 import ReactMapboxGl from 'react-mapbox-gl';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -52,6 +53,4 @@ const StyledComponent = styled(Component)`
 /**
  * Map
  */
-export const Map = memo((props: MapProps) => {
-  return <StyledComponent {...props} />;
-});
+export const Map = memo((props: MapProps) => <StyledComponent {...props} />);

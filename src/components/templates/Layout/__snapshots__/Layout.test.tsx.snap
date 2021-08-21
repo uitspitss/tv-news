@@ -147,13 +147,7 @@ exports[`Layout snapshot test 1`] = `
           >
             <button
               aria-label="facebook"
-              class="button"
-              disabledstyle="[object Object]"
-              opts="[object Object]"
-              style="background-color: transparent; padding: 0px; cursor: pointer;"
-              url="https://tv-news.uitspitss.dev"
-              windowheight="400"
-              windowwidth="550"
+              style="background-color: transparent; padding: 0px; cursor: pointer; outline: none;"
             >
               <svg
                 height="24"
@@ -174,13 +168,7 @@ exports[`Layout snapshot test 1`] = `
             </button>
             <button
               aria-label="twitter"
-              class="button"
-              disabledstyle="[object Object]"
-              opts="[object Object]"
-              style="background-color: transparent; padding: 0px; cursor: pointer;"
-              url="https://tv-news.uitspitss.dev"
-              windowheight="400"
-              windowwidth="550"
+              style="background-color: transparent; padding: 0px; cursor: pointer; outline: none;"
             >
               <svg
                 height="24"

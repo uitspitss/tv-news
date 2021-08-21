@@ -29,6 +29,7 @@ class MyDocument extends Document {
             // @ts-ignore twin.macro
             data-emotion-css={this.props.ids.join(' ')}
             // @ts-ignore twin.macro
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: this.props.css }}
           />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
