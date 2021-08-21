@@ -1,6 +1,7 @@
 import React, { FC, memo, ReactNode } from 'react';
 import Popup from 'reactjs-popup';
 import { PopupActions } from 'reactjs-popup/dist/types';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 type DialogCloseAction = PopupActions['close'];
@@ -59,6 +60,6 @@ const StyledComponent = styled(Component)`
 /**
  * ダイアログ
  */
-export const Dialog: FC<DialogProps> = memo((props) => {
-  return <StyledComponent {...props} />;
-});
+export const Dialog: FC<DialogProps> = memo((props) => (
+  <StyledComponent {...props} />
+));

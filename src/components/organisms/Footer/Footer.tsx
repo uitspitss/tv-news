@@ -1,4 +1,5 @@
 import React, { memo, VFC } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 import SEO from '~/next-seo.config.json';
@@ -50,6 +51,6 @@ const StyledComponent = styled(Component)`
 /**
  * footer
  */
-export const Footer = memo((props: FooterProps) => {
-  return <StyledComponent {...props} />;
-});
+export const Footer = memo((props: FooterProps) => (
+  <StyledComponent {...props} />
+));

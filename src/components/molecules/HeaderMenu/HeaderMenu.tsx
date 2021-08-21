@@ -1,4 +1,5 @@
 import React, { memo, VFC } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 import Link from 'next/link';
 
@@ -47,6 +48,6 @@ const StyledComponent = styled(Component)`
 /**
  * menu in header
  */
-export const HeaderMenu = memo((props: HeaderMenuProps) => {
-  return <StyledComponent {...props} />;
-});
+export const HeaderMenu = memo((props: HeaderMenuProps) => (
+  <StyledComponent {...props} />
+));

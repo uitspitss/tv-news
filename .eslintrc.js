@@ -33,9 +33,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
     'plugin:jest-dom/recommended',
-    'plugin:testing-library/recommended',
+    'plugin:testing-library/react',
     'prettier',
-    'prettier/react',
+    'plugin:@next/next/recommended',
   ],
   rules: {
     'no-mixed-operators': 'error',
@@ -121,6 +121,7 @@ module.exports = {
       },
     ],
     'jsx-a11y/anchor-is-valid': 'off',
+    'testing-library/render-result-naming-convention': 'off',
   },
   overrides: [
     {

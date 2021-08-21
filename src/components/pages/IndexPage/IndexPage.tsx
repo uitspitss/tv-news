@@ -1,4 +1,5 @@
 import React, { Fragment, memo, useCallback, useMemo, VFC } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 import { Popup } from 'react-mapbox-gl';
 

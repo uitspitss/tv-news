@@ -1,4 +1,5 @@
 import React, { memo, VFC } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 import {
   ToastContainer as ReactToastifyContainer,
@@ -15,20 +16,18 @@ export type ToastContainerProps = {
 
 type Props = ToastContainerProps;
 
-const Component: VFC<Props> = (props) => {
-  return (
-    <ReactToastifyContainer
-      position="top-right"
-      autoClose={5000}
-      closeOnClick
-      closeButton
-      draggable={false}
-      hideProgressBar
-      transition={Slide}
-      {...props}
-    />
-  );
-};
+const Component: VFC<Props> = (props) => (
+  <ReactToastifyContainer
+    position="top-right"
+    autoClose={5000}
+    closeOnClick
+    closeButton
+    draggable={false}
+    hideProgressBar
+    transition={Slide}
+    {...props}
+  />
+);
 
 const StyledComponent = styled(Component)`
   ${tw`fixed top-12`}
@@ -57,6 +56,6 @@ const StyledComponent = styled(Component)`
 /**
  * ToastContainer of react-toastify
  */
-export const ToastContainer = memo((props: ToastContainerProps) => {
-  return <StyledComponent {...props} />;
-});
+export const ToastContainer = memo((props: ToastContainerProps) => (
+  <StyledComponent {...props} />
+));

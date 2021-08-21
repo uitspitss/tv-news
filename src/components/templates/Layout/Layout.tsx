@@ -1,4 +1,5 @@
 import React, { memo, FC, ReactNode } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 import { Header } from '~/components/organisms/Header';
@@ -47,6 +48,6 @@ const StyledComponent = styled(Component)`
 /**
  * レイアウト
  */
-export const Layout: FC<LayoutProps> = memo((props) => {
-  return <StyledComponent {...props} />;
-});
+export const Layout: FC<LayoutProps> = memo((props) => (
+  <StyledComponent {...props} />
+));

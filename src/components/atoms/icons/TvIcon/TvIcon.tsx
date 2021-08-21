@@ -1,4 +1,5 @@
 import React, { memo, VFC } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 export type TvIconProps = {
@@ -38,6 +39,6 @@ const StyledComponent = styled(Component)``;
 /**
  * TvIcon
  */
-export const TvIcon = memo((props: TvIconProps) => {
-  return <StyledComponent {...props} />;
-});
+export const TvIcon = memo((props: TvIconProps) => (
+  <StyledComponent {...props} />
+));

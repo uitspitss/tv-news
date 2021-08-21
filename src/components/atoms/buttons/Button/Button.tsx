@@ -5,6 +5,7 @@ import React, {
   ForwardRefExoticComponent,
   ReactNode,
 } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import tw, { styled } from 'twin.macro';
 
 export type ButtonProps = {
@@ -72,7 +73,5 @@ const StyledComponent = styled(Component)`
  * Button
  */
 export const Button: ForwardRefExoticComponent<ButtonProps> = memo(
-  forwardRef((props, ref) => {
-    return <StyledComponent {...props} ref={ref} />;
-  }),
+  forwardRef((props, ref) => <StyledComponent {...props} ref={ref} />),
 );
