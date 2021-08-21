@@ -106,7 +106,7 @@
     "reg-publish-s3-plugin": "0.10.16",
     "reg-suit": "0.10.16",
     "sass-loader": "12.1.0",
-    "style-loader": "2.0.0",
+    "style-loader": "3.2.1",
     "stylelint": "13.13.1",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-recess-order": "2.5.0",
