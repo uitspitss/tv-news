@@ -21,17 +21,17 @@ describe('molecules/CookieNotification', () => {
           'This website uses cookies to enhance the user experience.',
         ),
       ).toBeInTheDocument();
-      expect(screen.getByText('I understand')).toBeInTheDocument();
+      expect(screen.getByText('理解しました')).toBeInTheDocument();
     });
     test('click, then invisible', () => {
-      fireEvent.click(screen.getByText('I understand'));
+      fireEvent.click(screen.getByText('理解しました'));
 
       expect(
         screen.queryByText(
           'This website uses cookies to enhance the user experience.',
         ),
       ).not.toBeInTheDocument();
-      expect(screen.queryByText('I understand')).not.toBeInTheDocument();
+      expect(screen.queryByText('理解しました')).not.toBeInTheDocument();
     });
   });
 });
