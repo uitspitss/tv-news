@@ -21,7 +21,7 @@
     "@emotion/react": "11.4.1",
     "@emotion/server": "11.4.0",
     "@emotion/styled": "11.3.0",
-    "@hookform/resolvers": "2.5.2",
+    "@hookform/resolvers": "2.8.0",
     "@sentry/browser": "6.7.2",
     "@sentry/integrations": "6.7.2",
     "@sentry/node": "6.7.2",
