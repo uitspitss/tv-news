@@ -38,7 +38,7 @@
     "reactjs-popup": "2.0.5",
     "recoil": "0.4.1",
     "swr": "1.0.1",
-    "zod": "3.8.1"
+    "zod": "3.22.3"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "11.3.0",
