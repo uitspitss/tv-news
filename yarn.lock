@@ -15492,10 +15492,10 @@ youtube-player@5.5.2:
     load-script "^1.0.0"
     sister "^3.0.0"
 
-zod@3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.8.1.tgz#b1173c3b4ac2a9e06d302ff580e3b41902766b9f"
-  integrity sha512-u4Uodl7dLh8nXZwqXL1SM5FAl5b4lXYHOxMUVb9lqhlEAZhA2znX+0oW480m0emGFMxpoRHzUncAqRkc4h8ZJA==
+zod@3.22.3:
+  version "3.22.3"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.3.tgz#2fbc96118b174290d94e8896371c95629e87a060"
+  integrity sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==
 
 zwitch@^1.0.0:
   version "1.0.5"
