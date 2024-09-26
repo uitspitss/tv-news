@@ -20,7 +20,7 @@
     "@emotion/react": "11.4.1",
     "@emotion/server": "11.4.0",
     "@emotion/styled": "11.3.0",
-    "@hookform/resolvers": "2.8.0",
+    "@hookform/resolvers": "2.8.10",
     "@tailwindcss/forms": "0.3.3",
     "@tailwindcss/typography": "0.4.1",
     "@zeit/next-source-maps": "0.0.3",
